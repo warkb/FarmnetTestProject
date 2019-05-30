@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"controller\tAngular.js"
+			],
+			[
+				"lo",
+				"log-page.component.js"
+			],
+			[
+				"fin",
+				"finalObj\tlet"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
 				"$sc",
 				"$scope\tAngularJS"
 			],
@@ -78,10 +94,6 @@
 			[
 				"so",
 				"sociotask.txt"
-			],
-			[
-				"con",
-				"console"
 			],
 			[
 				"di",
@@ -188,10 +200,6 @@
 				"products"
 			],
 			[
-				"fin",
-				"finalObj"
-			],
-			[
 				"ng-re",
 				"ng-repeat\tAngularJS"
 			],
@@ -288,55 +296,19 @@
 	"buffers":
 	[
 		{
-			"file": "server.js",
+			"file": "todo.todo",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 857,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 1176,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "let db = new sqlite3.Database('./db/sqlite.db', (err) => {\n  if (err) {\n    console.error(err.message);\n  }\n  console.log('Connected to the chinook database.');\n});",
-			"settings":
-			{
-				"buffer_size": 164,
-				"line_ending": "Windows",
-				"name": "let db = new sqlite3.Database('./db/sqlite.db', (e"
 			}
 		},
 		{
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 551,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/app.js",
-			"settings":
-			{
-				"buffer_size": 259,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "todo.todo",
-			"settings":
-			{
-				"buffer_size": 731,
+				"buffer_size": 697,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -356,6 +328,18 @@
 			[
 				"git com",
 				"Git: Commit"
+			],
+			[
+				"git add ",
+				"Git: Add All"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add all",
+				"Git: Add All"
 			],
 			[
 				"git ad",
@@ -452,10 +436,24 @@
 	[
 		"/C/Users/Redline/Desktop/tmp/windowsProject",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app",
-		"/C/Users/Redline/Desktop/tmp/windowsProject/app/lib"
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page"
 	],
 	"file_history":
 	[
+		"/C/Users/Redline/Desktop/tmp/windowsProject/server.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page/log-page.component.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page/log-page.module.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page/person-page.component.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page/person-page.module.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/app.config.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/index.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page/person-page.template.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page/log-page.template.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/app.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/app.module.js",
+		"/D/YaDisk/YandexDisk/Собеседования/c# junior developr.txt",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/package.json",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/index.html",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/routing/index.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/script.js",
@@ -570,20 +568,7 @@
 		"/C/Users/Redline/Desktop/Производительность Деливери",
 		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/e2e-tests/scenarios.js",
 		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-list/phone-list.component.spec.js",
-		"/C/Users/Redline/Desktop/tmp/tmp.html",
-		"/C/Users/Redline/AppData/Local/Temp/scp57907/DeliveryFM/Content/CSS/main.css",
-		"/C/Users/Redline/Desktop/guides.md",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/app.js",
-		"/C/Users/Redline/Desktop/tmp.html",
-		"/C/Users/Redline/Desktop/imglist.txt",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/Dal/ItemsDal.cs",
-		"/C/Users/Redline/AppData/Local/Temp/scp45566/Nektariy/Web.config",
-		"/D/Vladimir_SpaceApp/Documents/Projects/Bekker/UI/Web.config",
-		"/C/Users/Redline/Documents/AngularJsTutorial/notes.md",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/karma.conf.js",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/app.spec.js",
-		"/C/Users/Redline/Desktop/Манифест.todo",
-		"/C/Users/Redline/AppData/Local/Temp/Rar$DIa12380.24013/document.xml"
+		"/C/Users/Redline/Desktop/tmp/tmp.html"
 	],
 	"find":
 	{
@@ -608,6 +593,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"INSERT",
+			"'Иванович'",
+			"^",
+			"'Иванович'",
+			"'Иван'",
+			"'Иванов'",
+			"Иванов",
+			"^",
+			"\\w+",
+			"\n",
+			"                        ",
 			" ",
 			"viewport.get(0).setPointerCapture",
 			"setPointerCapture",
@@ -724,23 +720,12 @@
 			"thick",
 			"^",
 			"order_city",
-			"TRUNCATE",
-			"create",
-			"create table.+",
-			"meta_desc_ru_msk",
-			"description_ru_spb",
-			" +",
-			"g\"",
-			"/Content",
-			"color",
-			")",
-			"back",
-			"searchParmsObject"
+			"TRUNCATE"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -753,65 +738,42 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server.js",
+					"file": "todo.todo",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 857,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								723,
+								723
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"plain_tasks_remain_time_phantoms":
+							[
+							],
+							"syntax": "Packages/PlainTasks/PlainTasks.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1176,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								261,
-								261
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							}
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -821,50 +783,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								164
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"auto_name": "let db = new sqlite3.Database('./db/sqlite.db', (e",
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "app/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 551,
+						"buffer_size": 697,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								53,
-								53
+								37,
+								37
 							]
 						],
 						"settings":
@@ -878,75 +810,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 259,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								163,
-								163
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "todo.todo",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 731,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								731,
-								731
-							]
-						],
-						"settings":
-						{
-							"apply_syntax_touched": true,
-							"git_gutter_is_enabled": true,
-							"plain_tasks_remain_time_phantoms":
-							[
-							],
-							"syntax": "Packages/PlainTasks/PlainTasks.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1013,6 +877,14 @@
 		"selected_items":
 		[
 			[
+				"",
+				"app\\persons-page\\person-page.template.html"
+			],
+			[
+				"inde",
+				"app\\index.html"
+			],
+			[
 				"app/phone-list/phone-list.template.html",
 				"angular-phonecat\\app\\phone-list\\phone-list.template.html"
 			],
@@ -1043,10 +915,6 @@
 			[
 				"phone-list.component.spec.js",
 				"angular-phonecat\\app\\phone-list\\phone-list.component.spec.js"
-			],
-			[
-				"",
-				"C:\\Users\\Redline\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\start.html"
 			],
 			[
 				"e2e-te",
@@ -1149,7 +1017,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 387.0,
+	"side_bar_width": 300.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

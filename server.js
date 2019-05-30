@@ -12,9 +12,9 @@ let db = new sqlite3.Database('./farmnet.db', (err) => {
 
 http.createServer(function(request, response){
 
-    console.log(`Запрошенный адрес: ${request.url}`);
+    console.log(`Запрошенный адрес: ${request.options}`);
     // получаем путь после слеша
-    const filePath = request.url.substr(1);
+    const filePath = request.url.substr(1).replace('index.html/#!/', '');
     fs.readFile(filePath, function(error, data){
 
         if(error){

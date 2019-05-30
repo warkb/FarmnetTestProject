@@ -9,7 +9,8 @@
 		"angular-route": "1.7.x",
 		"bootstrap": "^4.3.1",
 		"jquery": "^3.4.1",
-		"sqlite3": ""
+		"sqlite3": "",
+		"express": "^4.16.4"
 	},
 	"devDependencies": {
 		"angular-mocks": "1.7.x",
