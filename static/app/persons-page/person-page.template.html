@@ -3,14 +3,14 @@
 		<fieldset>
 			<input type="hidden" ng-model="$ctrl.id" value="0">
 			<p>
-				<label for="">Имя</label>
-				<br/>
-				<input type="text" ng-model="$ctrl.first_name">
-			</p>
-			<p>
 				<label for="">Фамилия</label>
 				<br/>
 				<input type="text" ng-model="$ctrl.last_name">
+			</p>
+			<p>
+				<label for="">Имя</label>
+				<br/>
+				<input type="text" ng-model="$ctrl.first_name">
 			</p>
 			<p>
 				<label for="">Отчество</label>
@@ -23,13 +23,14 @@
 				<input type="number" ng-model="$ctrl.unix_time">
 			</p>
 			<button ng-click="$ctrl.accept_user()">
-				Создать/Редактировать
+				{{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
 			</button>
 		</fieldset>
 	</form>
 	<ul>
 		<li ng-repeat="person in $ctrl.persons">
 			{{person.last_name}} {{person.first_name}} {{person.father_name}} {{person.unix_time}}
+			<button ng-click="$ctrl.edit_user(person.id)">Редактировать</button>
 			<button ng-click="$ctrl.delete_user(person.id)">Удалить</button>
 		</li>
 	</ul>
