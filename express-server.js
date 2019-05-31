@@ -13,9 +13,10 @@ let db = new sqlite3.Database('./farmnet.db', (err) => {
 
 const port = 8800;
 
-// определяем обработчик для маршрута "/"
+// определяем обработчик для статики
 app.use("/static", express.static(__dirname + "/static"));
 app.get("/allpersons", function(request, response) {
+	// возвращает json со списком всех пользователей
 	let sql = 'select * from Persons';
 	finalObj = [];
 	db.all(sql, [], (err, rows) => {
@@ -51,6 +52,18 @@ app.get("/changeperson", function (request, response) {
 			}
 			response.json(JSON.stringify(rows[0]));
 		});
+	});
+})
+
+
+app.get('/delperson', function(request, response) {
+	// удаляем пользователя из базы данных
+	let sql = 'delete from Persons where id = ' + request.query.id;
+	db.run(sql, [], (err, rows) => {
+		if (err) {
+			throw err;
+		}
+		response.json(JSON.stringify({id: request.query.id}));
 	});
 })
 

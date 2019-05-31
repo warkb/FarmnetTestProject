@@ -15,6 +15,8 @@ component('personsPage', {
 			self.persons = JSON.parse(response.data);
 		});
 		self.accept_user = function ($ctrl) {
+			// принимает вывод с формы пользователя
+			// и отправляет запрос на сервер на добавление/удаление
 			let unix_time = parseInt(self.unix_time);
 			console.log(`unix-time = ${unix_time}`);
 			if (isNaN(unix_time)) {
@@ -32,6 +34,15 @@ component('personsPage', {
 				.then(function(response) {
 				self.persons.push(JSON.parse(response.data));
 			});
+		},
+		self.delete_user = function (id) {
+			// отправляет в базу запрос на удаление пользователя
+			$http.get('delperson', {params: {id: id}})
+			.then(function (response) {
+				self.persons = self.persons.filter(function (person) {
+					return person.id != id;
+				});
+			})
 		}
 	}]
 });

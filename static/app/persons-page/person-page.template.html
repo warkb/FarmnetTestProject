@@ -30,6 +30,7 @@
 	<ul>
 		<li ng-repeat="person in $ctrl.persons">
 			{{person.last_name}} {{person.first_name}} {{person.father_name}} {{person.unix_time}}
+			<button ng-click="$ctrl.delete_user(person.id)">Удалить</button>
 		</li>
 	</ul>
 </div>
