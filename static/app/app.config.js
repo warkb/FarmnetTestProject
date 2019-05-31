@@ -4,7 +4,6 @@ angular.
   module('farmNetApp').
   config(['$routeProvider',
     function config($routeProvider) {
-    console.log('RRRRoooooutes!');
       $routeProvider.
         when('/logon', {
           template: '<log-page></log-page>'
