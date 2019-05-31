@@ -27,8 +27,21 @@
 			</button>
 		</fieldset>
 	</form>
+	<p>
+		Фильтрация:
+		<input ng-model="$ctrl.query">
+	</p>
+	<p>
+		<button ng-click='$ctrl.orderProp="last_name"'>Сортировать по возрастанию фамилии</button>
+		<br>
+		<button ng-click='$ctrl.orderProp="-last_name"'>Сортировать по убыванию фамилии</button>
+		<br>
+		<button ng-click='$ctrl.orderProp="unix_time"'>Сортировать по возрастанию даты</button>
+		<br>
+		<button ng-click='$ctrl.orderProp="-unix_time"'>Сортировать по убыванию даты</button>
+	</p>
 	<ul>
-		<li ng-repeat="person in $ctrl.persons">
+		<li ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:$ctrl.query">
 			{{person.last_name}} {{person.first_name}} {{person.father_name}} {{person.unix_time}}
 			<button ng-click="$ctrl.edit_user(person.id)">Редактировать</button>
 			<button ng-click="$ctrl.delete_user(person.id)">Удалить</button>

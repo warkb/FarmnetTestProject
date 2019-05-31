@@ -11,6 +11,7 @@ component('personsPage', {
 		self.last_name = '';
 		self.father_name = '';
 		self.unix_time = '';
+		self.orderProp = 'last_name';
 		self.buttonAddChangeText = {
 			add: 'Создать',
 			change: 'Редактировать'
