@@ -6,27 +6,32 @@ component('personsPage', {
 	templateUrl: '/static/app/persons-page/person-page.template.html',
 	controller: ['$http', function PhoneListController($http) {
 		var self = this;
-		self.id = 0;
-		self.first_name = '';
-		self.last_name = '';
-		self.father_name = '';
-		self.unix_time = '';
-		self.orderProp = 'last_name';
 		self.buttonAddChangeText = {
 			add: 'Создать',
 			change: 'Редактировать'
 		}
+		self.clean_user_data = function() {
+			/** сбрасывает заполнение для формы 
+			 * создания/редактирования пользователя
+			 */
+			 self.id = 0;
+			 self.first_name = '';
+			 self.last_name = '';
+			 self.father_name = '';
+			 self.unix_time = '';
+		}
+		self.clean_user_data(); // инициализируем форму пользователя
+		self.orderProp = 'last_name'; // поле для сортировки
 		self.reload_users = function() {
-			// синхронизирует список пользователей с базой данных
-			$http.get('allpersons').then(function(response) {
-				self.persons = JSON.parse(response.data);
+		// синхронизирует список пользователей с базой данных
+		$http.get('allpersons').then(function(response) {
+			self.persons = JSON.parse(response.data);
 			});
 		}
 		self.accept_user = function ($ctrl) {
 			// принимает вывод с формы пользователя
 			// и отправляет запрос на сервер на добавление/удаление
 			let unix_time = parseInt(self.unix_time);
-			console.log(`unix-time = ${unix_time}`);
 			if (isNaN(unix_time)) {
 				unix_time = 0;
 				console.log('New ut');
@@ -42,6 +47,7 @@ component('personsPage', {
 			.then(function(response) {
 				self.reload_users();
 			});
+			self.clean_user_data(); // сбрасывает форму
 		},
 		self.delete_user = function (id) {
 			// отправляет в базу запрос на удаление пользователя

@@ -74,5 +74,5 @@ app.get("/", function(request, response){
 });
 
 app.listen(port, function () {
-	console.log(`http://localhost:${port}/#!/logon`);
+	console.log(`http://localhost:${port}/#!/persons`);
 });
