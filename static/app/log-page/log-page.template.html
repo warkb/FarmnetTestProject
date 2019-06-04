@@ -2,15 +2,15 @@
 	<div id="login-card" class="card">
 		<div id="inputs">
 			<div class="form-group">
-				<label class="form-label" for="login">Введите сюда свой логин</label>
+				<label class="form-label" for="login">Введите свой логин</label>
 				<input id="login" class="form-input" type="text" />
 			</div>
 			<div class="form-group">
-				<label class="form-label" for="password">Введите сюда свой пароль</label>
+				<label class="form-label" for="password">Введите свой пароль</label>
 				<input id="password" class="form-input" type="text" />
 			</div>
 		</div>
-		<div id="next-button">Далее</div>
+		<div id="next-button" ng-click="$ctrl.next_click()">Далее</div>
 	</div>
 	<script>
 		
