@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background-size\tproperty"
+			],
+			[
+				"new",
+				"new_unix_time\tlet"
+			],
+			[
+				"fi",
+				"first_name\twarning"
+			],
+			[
+				"per",
+				"persons\twarning"
+			],
+			[
+				"re",
+				"reload_users\twarning"
+			],
+			[
+				"te",
+				"then\twarning"
+			],
+			[
+				"row",
+				"rows\tparameter"
+			],
+			[
+				"un",
+				"unix_time\tlet"
+			],
+			[
+				"st",
+				"stringify\tmethod"
+			],
+			[
+				"Js",
+				"JSON\twarning"
+			],
+			[
+				"parse",
+				"parseInt\tfunction"
+			],
+			[
+				"ng-cl",
+				"ng-click\tAngularJS"
+			],
+			[
+				"pa",
+				"padding-left\tproperty"
+			],
+			[
+				"l",
+				"log\tmethod"
+			],
+			[
 				"con",
 				"controller\tAngular.js"
 			],
@@ -188,14 +244,6 @@
 				"prod"
 			],
 			[
-				"st",
-				"style"
-			],
-			[
-				"new",
-				"newProd"
-			],
-			[
 				"prod",
 				"products"
 			],
@@ -305,10 +353,10 @@
 			}
 		},
 		{
-			"file": "app/index.html",
+			"file": "express-server.js",
 			"settings":
 			{
-				"buffer_size": 697,
+				"buffer_size": 2153,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -330,6 +378,10 @@
 				"Git: Commit"
 			],
 			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
 				"git add ",
 				"Git: Add All"
 			],
@@ -339,10 +391,6 @@
 			],
 			[
 				"add all",
-				"Git: Add All"
-			],
-			[
-				"git ad",
 				"Git: Add All"
 			],
 			[
@@ -434,31 +482,46 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Redline/Desktop/tmp/windowsProject",
-		"/C/Users/Redline/Desktop/tmp/windowsProject/app",
-		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page",
-		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page"
+		"/C/Users/Redline/Desktop/tmp/windowsProject"
 	],
 	"file_history":
 	[
+		"/C/Users/Redline/Desktop/Shared/_ArticlePageLayout.cshtml",
+		"/C/Users/Redline/Desktop/Shared/_Layout.cshtml",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/express-server.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/static/app/persons-page/person-page.template.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/static/app/index.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/static/app/persons-page/person-page.component.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/README.md",
+		"/C/Users/Redline/Desktop/tmp/tmp.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/package.json",
+		"/C/Users/Redline/Desktop/same-1.2/TODO.txt",
+		"/C/Users/Redline/Desktop/same-1.2/INSTALL.txt",
+		"/C/Users/Redline/Desktop/same-1.2/README.txt",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/static/app/app.config.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/static/app/log-page/log-page.component.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/static/app/app.module.js",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/index.html",
+		"/C/Users/Redline/Desktop/tmp/windowsProject/app/express-server.js",
+		"/C/Users/Redline/Desktop/tmp/tmp.js",
+		"/D/Vladimir_SpaceApp/Documents/Projects/nordic_prod/nordic/settings.py",
+		"/C/Users/Redline/Desktop/nordicInfo.txt",
+		"/C/Users/Redline/Desktop/WorkProjects/hotkeysAndTricks.md",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/server.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page/log-page.component.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page/log-page.module.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page/person-page.component.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page/person-page.module.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/app.config.js",
-		"/C/Users/Redline/Desktop/tmp/windowsProject/app/index.html",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/persons-page/person-page.template.html",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/log-page/log-page.template.html",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/app.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/app/app.module.js",
 		"/D/YaDisk/YandexDisk/Собеседования/c# junior developr.txt",
-		"/C/Users/Redline/Desktop/tmp/windowsProject/package.json",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/index.html",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/routing/index.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/script.js",
 		"/C/Users/Redline/Desktop/tmp/windowsProject/style.css",
-		"/C/Users/Redline/Desktop/WorkProjects/hotkeysAndTricks.md",
 		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-list/phone-list.template.html",
 		"/C/backups/klimat1405.sql",
 		"/C/Users/Redline/AppData/Local/Temp/Rar$DIb8352.42854/sociotasks.json",
@@ -476,7 +539,6 @@
 		"/D/Vladimir_SpaceApp/Documents/Projects/HramPetraIPavla/hramPP/Scripts/jquery.bxslider.min.js",
 		"/C/Users/Redline/AppData/Local/Temp/scp37178/pavla-petra-hram/Views/Home/Index.cshtml",
 		"/C/Users/Redline/AppData/Local/Temp/scp38025/pavla-petra-hram/Views/Shared/_Layout.cshtml",
-		"/C/Users/Redline/Desktop/nordicInfo.txt",
 		"/D/Vladimir_SpaceApp/Documents/Projects/Bekker/UI/Views/Home/Oplata.cshtml",
 		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/UI/Web.config",
 		"/C/Users/Redline/AppData/Local/Temp/scp39136/MehaAfina/Web.config",
@@ -551,24 +613,7 @@
 		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/start_all_tests.bat",
 		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/start.py",
 		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/__init__.py",
-		"/C/Users/Redline/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/start.html",
-		"/C/Users/Redline/AppData/Local/Temp/scp32876/DeliveryFM/Scripts/ViewScripts/CategoriesView.js",
-		"/C/Users/Redline/PycharmProjects/FlaskTutorial/my_bitch_db.py",
-		"/D/Vladimir_SpaceApp/Documents/MySuperTrello/.gitignore",
-		"/C/Users/Redline/PycharmProjects/FlaskTutorial/app.py",
-		"/C/Users/Redline/Documents/FlaskTutorial/app.py",
-		"/C/Users/Redline/PycharmProjects/FlaskTutorial/myTrello.todo",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/package-lock.json",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-detail/phone-detail.component.js",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/package.json",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-detail/phone-detail.template.html",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/CategoryPageTest.py",
-		"/C/Users/Redline/AppData/Local/Temp/scp54897/DeliveryFM/Scripts/ViewScripts/CategoriesView.js",
-		"/C/Users/Redline/AppData/Local/Temp/scp11778/DeliveryFM/Views/Shared/_Layout.cshtml",
-		"/C/Users/Redline/Desktop/Производительность Деливери",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/e2e-tests/scenarios.js",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-list/phone-list.component.spec.js",
-		"/C/Users/Redline/Desktop/tmp/tmp.html"
+		"/C/Users/Redline/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/start.html"
 	],
 	"find":
 	{
@@ -579,6 +624,7 @@
 		"height": 128.0,
 		"where_history":
 		[
+			"C:\\Users\\Redline\\Desktop\\tmp\\windowsProject\\",
 			"D:\\largeTMP\\nordic_working\\nordicsite",
 			"D:\\largeTMP\\nordic",
 			"D:\\largeTMP\\nordicsite",
@@ -593,6 +639,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ng-value",
+			"checkbox",
+			"name",
+			"input",
+			"href=\"#\"",
+			"<input",
+			"let",
+			"=",
+			"pk",
+			"new_",
+			" =",
+			"new_",
+			"query",
+			"$ctrl",
+			"label><",
+			"a",
+			"</label>",
+			"t\"",
+			"phoneDetail",
+			"static",
+			"src",
 			"INSERT",
 			"'Иванович'",
 			"^",
@@ -699,33 +766,12 @@
 			"150-30",
 			"<!-- ko foreach: {data: selected_car_lengths, as: 'item'} -->",
 			"order-receipt",
-			"css.css",
-			"MIDDLEWARE",
-			"Esc",
-			"<<",
-			"<title>",
-			"MyApp",
-			"^",
-			"(index)",
-			":",
-			"}, {",
-			"Цвето",
-			"Заказать",
-			"Подтвер",
-			"Mail",
-			"remove",
-			"SA",
-			"INSERT INTO `vans_carmodel`",
-			"carmodel",
-			"thick",
-			"^",
-			"order_city",
-			"TRUNCATE"
+			"css.css"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 		],
@@ -784,27 +830,34 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/index.html",
-					"semi_transient": false,
+					"file": "express-server.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 697,
+						"buffer_size": 2153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								37,
-								37
+								399,
+								399
 							]
 						],
 						"settings":
 						{
 							"apply_syntax_touched": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1017,7 +1070,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 300.0,
+	"side_bar_width": 283.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
