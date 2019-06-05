@@ -34,7 +34,6 @@ component('personsPage', {
 			let unix_time = parseInt(self.unix_time);
 			if (isNaN(unix_time)) {
 				unix_time = 0;
-				console.log('New ut');
 			}
 			let params = {
 				id: self.id,

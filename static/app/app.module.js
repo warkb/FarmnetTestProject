@@ -4,5 +4,6 @@
 angular.module('farmNetApp', [
   'ngRoute',
   'logPage',
+  'ngAnimate',
   'personsPage'
 ]);

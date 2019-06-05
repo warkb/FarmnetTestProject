@@ -8,11 +8,13 @@
     <link type="text/css" rel="stylesheet" href="static/app/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-reboot.css">
     <link rel="stylesheet" type="text/css" href="../../static/css/login-card.css">
+    <link rel="stylesheet" type="text/css" href="static/css/app.animations.css">
     <!-- скрипты -->
     <script type="text/javascript" src="static/js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="/static/js/underscore.js"></script>
     <script src="static/app/lib/angular/angular.js"></script>
     <script src="static/app/lib/angular-route/angular-route.js"></script>
+    <script src="static/app/lib/angular-animate/angular-animate.js"></script>
 	<script src="static/app/app.module.js"></script>
 	<script src="static/app/app.config.js"></script>
 	<!-- подключаем компоненты -->
@@ -22,7 +24,6 @@
 	<script src="static/app/persons-page/person-page.component.js"></script>
 	<style type="text/css">
 		.main-div {
-			padding-left: 10px;
 			background-image: url('/static/img/background.jpg');
 			background-size: cover;
 			color: white;
@@ -32,11 +33,16 @@
 			position: fixed;
 			overflow-y: scroll;
 		}
+		#users-page {
+			padding-left: 10px;
+		}
 	</style>
 </head>
 <body>
-	<div ng-view class="main-div">
-		
+	<div class="main-div">
+		<div ng-view class="view-frame">
+			
+		</div>
 	</div>
 </body>
 </html>

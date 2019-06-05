@@ -15,7 +15,7 @@ component('logPage', {
 				$('input').focus(function(){
 					$(this).parents('.form-group').addClass('focused');
 				});
-				
+
 				$('input').blur(function(){
 					var inputValue = $(this).val();
 					if ( inputValue == "" ) {
@@ -26,32 +26,32 @@ component('logPage', {
 					}
 				});
 			};
-			self.next_click = function () {
-				// срабатывает при клике на кнопку Далее
-				if (self.step === 0) {
-					// если на вводе логина
-					if (self.login.length >0) {
-						self.step += 1;
-						$('#inputs').animate({left: '-270px'}, 250);
-					} else {
-						self.validated = false;
-					}
-				}
-				else {
-					if (self.password.length > 0)
-					{
-						$location.path('/persons');
-					} else {
-						self.validated = false;
-					}
+		self.next_click = function () {
+			// срабатывает при клике на кнопку Далее
+			if (self.step === 0) {
+				// если на вводе логина
+				if (self.login.length > 0) {
+					self.step += 1;
+					$('#inputs').animate({left: '-270px'}, 250);
+				} else {
+					self.validated = false;
 				}
 			}
-			let loginCardElement = $('#login-card');
-			let top = ($(window).height() - loginCardElement.height()) / 2.5;
-			let left = ($(window).width() - loginCardElement.width()) / 2;
-			loginCardElement.offset(
-				{top:top, left:left}
-				);
-			self.init_tips();
-		}]
-	});
+			else {
+				if (self.password.length > 0)
+				{
+					$location.path('/persons');
+				} else {
+					self.validated = false;
+				}
+			}
+		}
+		let loginCardElement = $('#login-card');
+		let top = ($(window).height() - 2 * loginCardElement.height()) / 2;
+		let left = ($(window).width() - 1.5 * loginCardElement.width()) / 2;
+		loginCardElement.offset(
+			{top:top, left:left}
+			);
+		self.init_tips();
+	}]
+});
