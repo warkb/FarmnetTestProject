@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const sqlite3 = require('sqlite3').verbose();
+const port = 8800;
 
 let db = new sqlite3.Database('./farmnet.db', (err) => {
     if (err) {
@@ -44,6 +45,6 @@ http.createServer(function(request, response){
             response.end(data);
         }
     });
-}).listen(8800, function(){
-    console.log("GoGoGo");
+}).listen(port, function(){
+    console.log(`localhost:${port}`);
 });
