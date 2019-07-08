@@ -1,0 +1,25 @@
+#persons-list {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#persons-list .card {
+	display: block;
+	color: black;
+	padding: 10px 30px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.5);
+	box-shadow: 0 20px 40px 0 rgba(0,0,0,.5);
+}
+
+.card>label {
+	color: black;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.card > p {
+	color: black;
+	margin-bottom: 0px;
+	padding-bottom: 8px;
+}

@@ -1,5 +1,5 @@
 <div id="users-page" class="page">
-	<form>
+<!-- 	<form>
 		<fieldset>
 			<input type="hidden" ng-model="$ctrl.id" value="0">
 			<p>
@@ -39,12 +39,19 @@
 		<button ng-click='$ctrl.orderProp="unix_time"'>Сортировать по возрастанию даты</button>
 		<br>
 		<button ng-click='$ctrl.orderProp="-unix_time"'>Сортировать по убыванию даты</button>
-	</p>
-	<ul>
-		<li ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:$ctrl.query">
-			{{person.last_name}} {{person.first_name}} {{person.father_name}} {{person.unix_time}}
-			<button ng-click="$ctrl.edit_user(person.id)">Редактировать</button>
-			<button ng-click="$ctrl.delete_user(person.id)">Удалить</button>
-		</li>
-	</ul>
+	</p> -->
+	<div id="persons-list">
+		<div ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:$ctrl.query" class="card">
+			<label>Фамилия:</label>
+			<p>{{person.last_name}}</p>
+			<label>Имя:</label>
+			<p>{{person.first_name}}</p>
+			<label>Отчество:</label>
+			<p>{{person.father_name}}</p>
+			<label>Дата рождения:</label>
+			<p>{{person.unix_time}}</p>
+			<!-- <button ng-click="$ctrl.edit_user(person.id)">Редактировать</button>
+			<button ng-click="$ctrl.delete_user(person.id)">Удалить</button> -->
+		</div>
+	</div>
 </div>
