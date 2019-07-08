@@ -50,8 +50,10 @@
 			<p>{{person.father_name}}</p>
 			<label>Дата рождения:</label>
 			<p>{{person.unix_time}}</p>
-			<!-- <button ng-click="$ctrl.edit_user(person.id)">Редактировать</button>
-			<button ng-click="$ctrl.delete_user(person.id)">Удалить</button> -->
+			<div class="buttons">
+				<button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
+				<button ng-click="$ctrl.delete_user(person.id)" class="btn btn-danger">Удалить</button>
+			</div>
 		</div>
 	</div>
 </div>
