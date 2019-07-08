@@ -10,6 +10,7 @@ component('logPage', {
 		self.validated = true;
 		self.login = '';
 		self.password = '';
+		self.button_text = 'Далее';
 		self.init_tips = function () {
 				// инициализирует подсказки
 				$('input').focus(function(){
@@ -33,6 +34,7 @@ component('logPage', {
 				if (self.login.length > 0) {
 					self.step += 1;
 					$('#inputs').animate({left: '-240px'}, 250);
+					self.button_text = 'Войти';
 				} else {
 					self.validated = false;
 				}

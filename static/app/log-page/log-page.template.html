@@ -3,14 +3,14 @@
 			<div class="form-group">
 				<label class="form-label" for="login">Введите свой логин</label>
 				<input id="login" class="form-input" type="text" 
-				ng-model="$ctrl.login" ng-change="$ctrl.validated=true" />
+				ng-model="$ctrl.login" ng-change="$ctrl.validated=true" autocomplete="off" />
 			</div>
 			<div class="form-group">
 				<label class="form-label" for="password">Введите свой пароль</label>
 				<input id="password" class="form-input" type="text" 
-				ng-model="$ctrl.password" ng-change="$ctrl.validated=true" />
+				ng-model="$ctrl.password" ng-change="$ctrl.validated=true" autocomplete="off" />
 			</div>
 		</div>
 		<div id="validate-text" ng-hide="$ctrl.validated">Минимум один символ</div>
-		<div id="next-button" ng-click="$ctrl.next_click()">Далее</div>
+		<div id="next-button" class="" ng-click="$ctrl.next_click()">{{ $ctrl.button_text }}</div>
 	</div>

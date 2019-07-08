@@ -12,6 +12,7 @@ https://codepen.io/torean/pen/QVrEWq
 	box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 	font-family: Arial, Helvetica, sans-serif;
 	overflow: hidden;
+	padding-top: 20px;
 }
 
 .form-group {
@@ -76,10 +77,15 @@ https://codepen.io/torean/pen/QVrEWq
 	margin-bottom: 1rem;
 }
 
+.form-input:focused {
+	background-color: white;
+}
+
 /*кнопка*/
 #next-button {
 	width: 240px;
 	height: 48px;
+	line-height: 37px;
 	padding: 5px 0;
 	border-radius: 3px;
 	border: none;
@@ -91,7 +97,7 @@ https://codepen.io/torean/pen/QVrEWq
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-top: 90px;
+	margin-top: 100px;
 	/*стиль*/
 	border-radius: 3px;
 	background-color: #ffdb4d;
@@ -99,5 +105,8 @@ https://codepen.io/torean/pen/QVrEWq
 }
 
 #validate-text {
+	position: absolute;
+	top: 90px;
+	left: 33px;
 	color: red;
 }
