@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"margin\tproperty"
+			],
+			[
+				"pers",
+				"persons"
+			],
+			[
 				"li",
 				"line-height\tproperty"
 			],
@@ -359,46 +367,43 @@
 			"file": "todo.todo",
 			"settings":
 			{
-				"buffer_size": 857,
+				"buffer_size": 206,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "static/app/log-page/log-page.component.js",
+			"file": "static/app/persons-page/person-page.component.js",
 			"settings":
 			{
-				"buffer_size": 1491,
+				"buffer_size": 2130,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "static/app/index.html",
+			"file": "static/app/persons-page/person-page.template.html",
 			"settings":
 			{
-				"buffer_size": 1696,
+				"buffer_size": 1756,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "============================================\nХоткеи\n============================================\nWindows\nskype - win+1\nexplorer - win+2\nvivaldi - win+3\nsublime - win+4\nconemu - win+5\nvishak - win+6\nsoapui - win+7\n\n---------------------------------------------\nSublime\nhttp://sublimetext.ru/documentation/hotkeys/windows\n\nCtrl+Shift+[ - свернуть код\nCtrl+Shift+] - развернуть код\n\n--------------------------------------------\nВижачулька)\nCtrl+Shift+A,P - назначить проект автозагружаемым\nCtrl+Alt+S,P - Параметры...(настройка системы)\nCtrl+Alt+C,S - закрыть все документы\n\n# region - создает именованный регион, который потом можно свернуть и который потом будет красиво подписан\n# endregion\n\n--------------------------------------------\nSoapUI\n\nhttp://kjetilvalle.com/posts/soapui-less-painful.html\n--------------------------------------------\nGIT - команды и фичи\n\ngit config —global alias.a add\n\ngit rm --cached - сохранить из отслеживания без удаления\n\ngit checkout [хеш коммита] [имя файла] вернуть файл к тому состоянию, которое было для этого коммита\n\nальяс addall - добавить все файлы\nальяс st - статус\nальяс ",
-			"file": "/C/Users/Wladimir/Desktop/Сакральные знания/Хоткеи.txt",
-			"file_size": 1408,
-			"file_write_time": 132067998771923468,
+			"file": "static/css/persons-list.css",
 			"settings":
 			{
-				"buffer_size": 1116,
+				"buffer_size": 453,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "static/app/log-page/log-page.template.html",
+			"file": "static/css/login-card.css",
 			"settings":
 			{
-				"buffer_size": 739,
+				"buffer_size": 2369,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -532,12 +537,18 @@
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app/log-page",
+		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app/persons-page",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/css",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/img",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/js"
 	],
 	"file_history":
 	[
+		"/C/Users/Wladimir/Desktop/Сакральные знания/Хоткеи.txt",
+		"/C/Users/Wladimir/Downloads/socio72/socio72/static/html/task-list.html",
+		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app/index.html",
+		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app/log-page/log-page.template.html",
+		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app/log-page/log-page.component.js",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/css/login-card.css",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/css/app.animations.css",
 		"/C/Users/Redline/Desktop/Shared/_ArticlePageLayout.cshtml",
@@ -660,12 +671,7 @@
 		"/C/Users/Redline/AppData/Local/Temp/scp35333/home/www/drujite.ru/apps/drujite/django_templates/partials/base/menu.html",
 		"/C/Users/Redline/AppData/Local/Temp/scp34212/home/www/drujite.ru/async_server.py",
 		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/index.html",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/test_item_sort.py",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/ItemsAdminIndexTests/test_page.py",
-		"/C/Users/Redline/Desktop/tmp/result.txt",
-		"/C/Users/Redline/Desktop/tmp/tmp.py",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/start_all_tests.bat",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/start.py"
+		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/test_item_sort.py"
 	],
 	"find":
 	{
@@ -691,6 +697,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"{{",
+			"}}",
+			"li",
+			"ul",
 			"// Добавляем",
 			"ng-value",
 			"checkbox",
@@ -814,11 +824,7 @@
 			"var",
 			"Olo",
 			"stNum2",
-			"     ",
-			"studentId1",
-			"150-30",
-			"<!-- ko foreach: {data: selected_car_lengths, as: 'item'} -->",
-			"order-receipt"
+			"     "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -836,7 +842,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -845,15 +851,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 857,
+						"buffer_size": 206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								629,
-								629
+								26,
+								26
 							]
 						],
 						"settings":
@@ -882,19 +888,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "static/app/log-page/log-page.component.js",
+					"file": "static/app/persons-page/person-page.component.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1491,
+						"buffer_size": 2130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								316,
-								316
+								1136,
+								1136
 							]
 						],
 						"settings":
@@ -907,82 +913,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "static/app/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1696,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1622,
-								1622
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/Wladimir/Desktop/Сакральные знания/Хоткеи.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1116,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1116,
-								1116
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "static/app/log-page/log-page.template.html",
+					"buffer": 2,
+					"file": "static/app/persons-page/person-page.template.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 739,
+						"buffer_size": 1756,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								538
+								1444,
+								1444
 							]
 						],
 						"settings":
@@ -996,6 +944,65 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "static/css/persons-list.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "static/css/login-card.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

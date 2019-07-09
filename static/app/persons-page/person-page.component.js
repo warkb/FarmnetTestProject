@@ -68,6 +68,15 @@ component('personsPage', {
 			self.father_name = user.father_name;
 			self.unix_time = user.unix_time;
 		}
+		self.unixtime_to_date = function(unix_time) {
+			// преобразует время в формате unix_time в понятную строку с датой
+			let date = new Date(unix_time * 1000);
+			let day = date.getDate();
+			day = day < 10 ? "0" + day : day;
+			let month = date.getMonth();
+			month = month < 10 ? "0" + month : month
+			return `${day}.${month}.${date.getFullYear()}`;
+		}
 		self.reload_users();
 	}]
 });

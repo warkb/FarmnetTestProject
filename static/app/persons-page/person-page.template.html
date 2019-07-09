@@ -49,7 +49,7 @@
 			<label>Отчество:</label>
 			<p>{{person.father_name}}</p>
 			<label>Дата рождения:</label>
-			<p>{{person.unix_time}}</p>
+			<p>{{ $ctrl.unixtime_to_date(person.unix_time) }}</p>
 			<div class="buttons">
 				<button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
 				<button ng-click="$ctrl.delete_user(person.id)" class="btn btn-danger">Удалить</button>
