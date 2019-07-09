@@ -80,7 +80,7 @@ component('personsPage', {
 		self.click_remove = function(personId) {
 			// обработка клика по кнопке Удалить
 			swal({
-				title: "Вы точно хотите удалить этошо пользователя?",
+				title: "Вы точно хотите удалить этого пользователя?",
 				// text: "Once deleted, you will not be able to recover this imaginary file!",
 				// icon: "warning",
 				buttons: ['Отмена', 'Да'],
