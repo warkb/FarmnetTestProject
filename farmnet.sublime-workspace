@@ -389,6 +389,16 @@
 			}
 		},
 		{
+			"contents": "Microsoft Windows [Version 10.0.17763.557]                                                                                                                                     \n(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.                                                                                                   \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>                                                                                                                                \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>                                                                                                                                \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>                                                                                                                                \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git st                                                                                                                          \nOn branch master                                                                                                                                                               \nYour branch is up to date with 'origin/master'.                                                                                                                                \n                                                                                                                                                                               \nChanges not staged for commit:                                                                                                                                                 \n  (use \"git add <file>...\" to update what will be committed)                                                                                                                   \n  (use \"git checkout -- <file>...\" to discard changes in working directory)                                                                                                    \n                                                                                                                                                                               \n        modified:   farmnet.sublime-workspace                                                                                                                                  \n        modified:   static/app/persons-page/person-page.component.js                                                                                                           \n        modified:   static/app/persons-page/person-page.template.html                                                                                                          \n        modified:   static/css/persons-list.css                                                                                                                                \n        modified:   todo.todo                                                                                                                                                  \n                                                                                                                                                                               \nUntracked files:                                                                                                                                                               \n  (use \"git add <file>...\" to include in what will be committed)                                                                                                               \n                                                                                                                                                                               \n        static/img/sort-by-alphabet-asc.png                                                                                                                                    \n        static/img/sort-by-alphabet-desc.png                                                                                                                                   \n        static/img/sort-by-time-asc.png                                                                                                                                        \n        static/img/sort-by-time-desc.png                                                                                                                                       \n                                                                                                                                                                               \nno changes added to commit (use \"git add\" and/or \"git commit -a\")                                                                                                              \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git addall                                                                                                                      \nwarning: LF will be replaced by CRLF in farmnet.sublime-workspace.                                                                                                             \nThe file will have its original line endings in your working directory                                                                                                         \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git commit -m\"Добавил картинок и панель управления\"                                                                             \n[master cddf65c] Добавил картинок и панель управления                                                                                                                          \n 9 files changed, 220 insertions(+), 74 deletions(-)                                                                                                                           \n create mode 100644 static/img/sort-by-alphabet-asc.png                                                                                                                        \n create mode 100644 static/img/sort-by-alphabet-desc.png                                                                                                                       \n create mode 100644 static/img/sort-by-time-asc.png                                                                                                                            \n create mode 100644 static/img/sort-by-time-desc.png                                                                                                                           \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git pushm                                                                                                                       \nEnumerating objects: 24, done.                                                                                                                                                 \nCounting objects: 100% (24/24), done.                                                                                                                                          \nDelta compression using up to 6 threads                                                                                                                                        \nCompressing objects: 100% (13/13), done.                                                                                                                                       \nWriting objects: 100% (13/13), 13.21 KiB | 6.61 MiB/s, done.                                                                                                                   \nTotal 13 (delta 9), reused 0 (delta 0)                                                                                                                                         \nremote: Resolving deltas: 100% (9/9), completed with 9 local objects.                                                                                                          \nremote:                                                                                                                                                                        \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch (1 moderate). To find out more, visit:                                                       \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts                                                                                                        \nremote:                                                                                                                                                                        \nTo https://github.com/warkb/FarmnetTestProject.git                                                                                                                             \n   1e5ea4b..cddf65c  master -> master                                                                                                                                          \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>",
+			"settings":
+			{
+				"buffer_size": 10079,
+				"line_ending": "Windows",
+				"name": " ",
+				"scratch": true
+			}
+		},
+		{
 			"file": "static/app/persons-page/person-page.component.js",
 			"settings":
 			{
@@ -398,20 +408,10 @@
 			}
 		},
 		{
-			"contents": "Microsoft Windows [Version 10.0.17763.557]                                                                                                                                     \n(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.                                                                                                   \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git addall                                                                                                                      \nwarning: LF will be replaced by CRLF in farmnet.sublime-workspace.                                                                                                             \nThe file will have its original line endings in your working directory                                                                                                         \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git commit -m\"дата выводится красивой строчкой\"                                                                                 \n[master 0e18694] дата выводится красивой строчкой                                                                                                                              \n 3 files changed, 70 insertions(+), 54 deletions(-)                                                                                                                            \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git pushm                                                                                                                       \nEnumerating objects: 15, done.                                                                                                                                                 \nCounting objects: 100% (15/15), done.                                                                                                                                          \nDelta compression using up to 6 threads                                                                                                                                        \nCompressing objects: 100% (8/8), done.                                                                                                                                         \nWriting objects: 100% (8/8), 1.41 KiB | 1.41 MiB/s, done.                                                                                                                      \nTotal 8 (delta 6), reused 0 (delta 0)                                                                                                                                          \nremote: Resolving deltas: 100% (6/6), completed with 6 local objects.                                                                                                          \nremote:                                                                                                                                                                        \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch (1 moderate). To find out more, visit:                                                       \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts                                                                                                        \nremote:                                                                                                                                                                        \nTo https://github.com/warkb/FarmnetTestProject.git                                                                                                                             \n   06aa3dc..0e18694  master -> master                                                                                                                                          \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git addall                                                                                                                      \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git commit -m\"Удаление пользователя сопровождается окном подтверждения\"                                                         \n[master 1e5ea4b] Удаление пользователя сопровождается окном подтверждения                                                                                                      \n 5 files changed, 21 insertions(+), 1 deletion(-)                                                                                                                              \n create mode 100644 static/js/sweetalert.min.js                                                                                                                                \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>git pushm                                                                                                                       \nEnumerating objects: 20, done.                                                                                                                                                 \nCounting objects: 100% (20/20), done.                                                                                                                                          \nDelta compression using up to 6 threads                                                                                                                                        \nCompressing objects: 100% (11/11), done.                                                                                                                                       \nWriting objects: 100% (11/11), 12.86 KiB | 6.43 MiB/s, done.                                                                                                                   \nTotal 11 (delta 8), reused 0 (delta 0)                                                                                                                                         \nremote: Resolving deltas: 100% (8/8), completed with 8 local objects.                                                                                                          \nremote:                                                                                                                                                                        \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch (1 moderate). To find out more, visit:                                                       \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts                                                                                                        \nremote:                                                                                                                                                                        \nTo https://github.com/warkb/FarmnetTestProject.git                                                                                                                             \n   0e18694..1e5ea4b  master -> master                                                                                                                                          \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>\nMicrosoft Windows [Version 10.0.17763.557]                                                                                                                                     \n(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.                                                                                                   \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>\nMicrosoft Windows [Version 10.0.17763.557]                                                                                                                                     \n(c) Корпорация Майкрософт (Microsoft Corporation), 2018. Все права защищены.                                                                                                   \n                                                                                                                                                                               \nC:\\Users\\Wladimir\\Documents\\FarmnetTestProject>",
-			"settings":
-			{
-				"buffer_size": 9647,
-				"line_ending": "Windows",
-				"name": "Command Prompt",
-				"scratch": true
-			}
-		},
-		{
 			"file": "static/app/persons-page/person-page.template.html",
 			"settings":
 			{
-				"buffer_size": 2127,
+				"buffer_size": 2261,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -438,7 +438,7 @@
 			"file": "static/css/persons-list.css",
 			"settings":
 			{
-				"buffer_size": 610,
+				"buffer_size": 630,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -456,12 +456,12 @@
 		"selected_items":
 		[
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"open",
 				"Terminus: Open Default Shell in View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"git com",
@@ -730,6 +730,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"src",
 			"button\"",
 			"<button",
 			"button",
@@ -856,8 +857,7 @@
 			"href",
 			"(",
 			",",
-			".",
-			"["
+			"."
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -875,7 +875,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -916,54 +916,23 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "static/app/persons-page/person-page.component.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2964,
+						"buffer_size": 10079,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2539,
-								2539
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 810.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9647,
-								9647
+								10079,
+								10079
 							]
 						],
 						"settings":
@@ -986,6 +955,8 @@
 							"is_widget": true,
 							"scroll_past_end": true,
 							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"terminus.highlight_counter": 27,
 							"terminus_view": true,
 							"terminus_view.args":
 							{
@@ -1010,14 +981,46 @@
 							"terminus_view.natural_keyboard": true,
 							"terminus_view.panel_name": null,
 							"terminus_view.tag": null,
-							"terminus_view.viewport_y": 954.0,
+							"terminus_view.viewport_y": 108.0,
+							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 954.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "static/app/persons-page/person-page.component.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2539,
+								2539
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1026,15 +1029,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2127,
+						"buffer_size": 2261,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1510,
-								1510
+								995,
+								995
 							]
 						],
 						"settings":
@@ -1048,7 +1051,7 @@
 						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1064,8 +1067,8 @@
 						"selection":
 						[
 							[
-								788,
-								788
+								634,
+								640
 							]
 						],
 						"settings":
@@ -1075,10 +1078,10 @@
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1108,7 +1111,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1117,15 +1120,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 610,
+						"buffer_size": 630,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								628,
+								628
 							]
 						],
 						"settings":
@@ -1138,7 +1141,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

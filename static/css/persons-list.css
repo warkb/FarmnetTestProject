@@ -38,3 +38,16 @@
 #filter-input {
 	margin: 10px 0px;
 }
+
+.sort-button {
+	border-radius: 5px;
+	border: 1px solid black;
+	-webkit-box-shadow: 0 0px 5px 0 rgba(0,0,0,.5);
+	box-shadow: 0 0px 5px 0 rgba(0,0,0,.5);
+	background-color: white;
+	margin-top: 5px;
+}
+
+.sort-button img {
+	width: 20px;
+}
