@@ -77,6 +77,24 @@ component('personsPage', {
 			month = month < 10 ? "0" + month : month
 			return `${day}.${month}.${date.getFullYear()}`;
 		}
+		self.click_remove = function(personId) {
+			// обработка клика по кнопке Удалить
+			swal({
+				title: "Вы точно хотите удалить этошо пользователя?",
+				// text: "Once deleted, you will not be able to recover this imaginary file!",
+				// icon: "warning",
+				buttons: ['Отмена', 'Да'],
+				dangerMode: true,
+			})
+			.then((willDelete) => {
+				if (willDelete) {
+					self.delete_user(personId);
+					swal("Пользователь был удален", {
+					});
+				} else {
+				}
+			});
+		}
 		self.reload_users();
 	}]
 });
