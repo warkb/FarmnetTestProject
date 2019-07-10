@@ -22,9 +22,11 @@
 				<br>
 				<input type="number" ng-model="$ctrl.unix_time">
 			</p>
-			<button ng-click="$ctrl.accept_user()">
-				{{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
-			</button>
+			<div>
+				<button ng-click="$ctrl.accept_user()" id="form-accept" class="btn btn-success">
+					{{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
+				</button>
+			</div>
 		</fieldset>
 	</form>
 </div>

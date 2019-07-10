@@ -61,8 +61,10 @@ component('personsPage', {
 		}
 		self.edit_user = function(id) {
 			// передает пользователя в форму редактирования
-			$('#add-person-form').modal();
-			return;
+			$('#add-person-form').modal({
+				showClose: false,
+				fadeDuration: 150,
+			});
 			let user = _.findWhere(self.persons, {id: id})
 			self.id = user.id;
 			self.first_name = user.first_name;
