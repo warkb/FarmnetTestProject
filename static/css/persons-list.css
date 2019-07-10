@@ -51,3 +51,11 @@
 .sort-button img {
 	width: 20px;
 }
+
+/*=====================================================*/
+/* Модалка */
+#add-person-form {
+	height: 400px;
+	margin: 22px;
+	overflow: visible;
+}
