@@ -12,7 +12,8 @@
 	box-shadow: 0 20px 40px 0 rgba(0,0,0,.5);
 }
 
-.card>label {
+#persons-list label, #add-person-form label {
+	/*для подписей на карточках и в модалке*/
 	color: black;
 	font-weight: bold;
 	margin-bottom: 0px;
@@ -24,7 +25,7 @@
 	padding-bottom: 8px;
 }
 
-.card > .buttons {
+.buttons {
 	/*кнопочки будут справа*/
 	text-align: right;
 }

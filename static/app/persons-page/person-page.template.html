@@ -23,8 +23,11 @@
 				<br>
 				<input type="number" ng-model="$ctrl.unix_time">
 			</p>
-			<div>
-				<button ng-click="$ctrl.accept_user()" id="form-accept" class="btn btn-success">
+			<div class="buttons">
+				<button class="btn btn-secondary" tabindex="0" ng-click="$ctrl.close_modal()">
+					Отмена
+				</button>
+				<button ng-click="$ctrl.accept_modal()" id="form-accept" class="btn btn-success">
 					{{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
 				</button>
 			</div>

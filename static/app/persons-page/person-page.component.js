@@ -32,7 +32,7 @@ component('personsPage', {
 	}
 	self.accept_user = function ($ctrl) {
 			// принимает вывод с формы пользователя
-			// и отправляет запрос на сервер на добавление/удаление
+			// и отправляет запрос на сервер на добавление/изменение
 			let unix_time = parseInt(self.unix_time);
 			if (isNaN(unix_time)) {
 				unix_time = 0;
@@ -85,8 +85,6 @@ component('personsPage', {
 			// обработка клика по кнопке Удалить
 			swal({
 				title: "Вы точно хотите удалить этого пользователя?",
-				// text: "Once deleted, you will not be able to recover this imaginary file!",
-				// icon: "warning",
 				buttons: ['Отмена', 'Да'],
 				dangerMode: true,
 			})
@@ -98,6 +96,15 @@ component('personsPage', {
 				} else {
 				}
 			});
+		}
+		self.close_modal = function () {
+			// закрывает модальное окно
+			$.modal.close();
+		}
+		self.accept_modal = function () {
+			// обработка подтверждения формы в модалке
+			self.close_modal();
+			self.accept_user();
 		}
 		self.reload_users();
 	}]
