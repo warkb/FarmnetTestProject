@@ -383,7 +383,7 @@
 			"file": "todo.todo",
 			"settings":
 			{
-				"buffer_size": 187,
+				"buffer_size": 228,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -402,7 +402,7 @@
 			"file": "static/app/persons-page/person-page.component.js",
 			"settings":
 			{
-				"buffer_size": 2964,
+				"buffer_size": 3049,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -411,7 +411,7 @@
 			"file": "static/app/persons-page/person-page.template.html",
 			"settings":
 			{
-				"buffer_size": 2281,
+				"buffer_size": 2377,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -420,7 +420,7 @@
 			"file": "static/css/persons-list.css",
 			"settings":
 			{
-				"buffer_size": 845,
+				"buffer_size": 990,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -429,7 +429,7 @@
 			"file": "static/app/index.html",
 			"settings":
 			{
-				"buffer_size": 1856,
+				"buffer_size": 2069,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -568,12 +568,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Wladimir/Documents/FarmnetTestProject",
-		"/C/Users/Wladimir/Documents/FarmnetTestProject/static",
-		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app",
-		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/css",
-		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/img",
-		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/js"
+		"/C/Users/WarKB/Desktop/FarmnetTestProject"
 	],
 	"file_history":
 	[
@@ -884,15 +879,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 187,
+						"buffer_size": 228,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								25
+								0,
+								0
 							]
 						],
 						"settings":
@@ -998,15 +993,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2964,
+						"buffer_size": 3049,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2539,
-								2539
+								1556,
+								1556
 							]
 						],
 						"settings":
@@ -1029,15 +1024,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2281,
+						"buffer_size": 2377,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								893,
-								893
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1060,15 +1055,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 845,
+						"buffer_size": 990,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								647,
-								647
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1090,15 +1085,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1856,
+						"buffer_size": 2069,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1665,
-								1665
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1149,7 +1144,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1206,7 +1201,7 @@
 	"project": "farmnet.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
