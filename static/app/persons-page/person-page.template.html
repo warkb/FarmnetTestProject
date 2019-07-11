@@ -6,22 +6,22 @@
 			<p>
 				<label for="">Фамилия</label>
 				<br/>
-				<input type="text" ng-model="$ctrl.last_name">
+				<input type="text" class="form-control" ng-model="$ctrl.last_name">
 			</p>
 			<p>
 				<label for="">Имя</label>
 				<br/>
-				<input type="text" ng-model="$ctrl.first_name">
+				<input type="text" class="form-control" ng-model="$ctrl.first_name">
 			</p>
 			<p>
 				<label for="">Отчество</label>
 				<br/>
-				<input type="text" ng-model="$ctrl.father_name">
+				<input type="text" class="form-control" ng-model="$ctrl.father_name">
 			</p>
 			<p>
 				<label for="">Дата</label>
 				<br>
-				<input type="number" ng-model="$ctrl.unix_time">
+				<input type="number" class="form-control" ng-model="$ctrl.unix_time">
 			</p>
 			<div class="buttons">
 				<button class="btn btn-secondary" tabindex="0" ng-click="$ctrl.close_modal()">
@@ -57,7 +57,7 @@
 					<img src="/static/img/sort-by-time-desc.png" alt="">
 				</button>
 			</p>
-			<button class="btn btn-success">
+			<button class="btn btn-success" ng-click="$ctrl.click_add_user()">
 				Добавить нового пользователя
 			</button>
 		</div>

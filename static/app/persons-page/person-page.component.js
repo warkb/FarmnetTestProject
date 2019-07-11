@@ -63,12 +63,15 @@ component('personsPage', {
 				});
 			})
 		}
-		self.edit_user = function(id) {
-			// передает пользователя в форму редактирования
+		self.open_modal = function () {
 			$('#add-person-form').modal({
 				showClose: false,
 				fadeDuration: 150,
 			});
+		}
+		self.edit_user = function(id) {
+			// передает пользователя в форму редактирования
+			self.open_modal();
 			let user = _.findWhere(self.persons, {id: id})
 			self.id = user.id;
 			self.first_name = user.first_name;
@@ -104,11 +107,16 @@ component('personsPage', {
 		self.close_modal = function () {
 			// закрывает модальное окно
 			$.modal.close();
+			self.clean_user_data();
 		}
 		self.accept_modal = function () {
 			// обработка подтверждения формы в модалке
-			self.close_modal();
 			self.accept_user();
+			self.close_modal();
+		}
+		self.click_add_user = function () {
+			// обработка нажатия на кнопку Добавить нового пользователя
+			self.open_modal();
 		}
 		self.reload_users();
 	}]
