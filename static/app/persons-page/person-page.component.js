@@ -28,6 +28,10 @@ component('personsPage', {
 		// синхронизирует список пользователей с базой данных
 		$http.get('allpersons').then(function(response) {
 			self.persons = JSON.parse(response.data);
+			self.persons.forEach(function (item) {
+				// добавляем поле, по которому будет фильтровать
+				item.fio = `${item.first_name} ${item.last_name} ${item.father_name}`
+			})
 		});
 	}
 	self.accept_user = function ($ctrl) {
