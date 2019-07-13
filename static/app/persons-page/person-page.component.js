@@ -6,10 +6,13 @@ component('personsPage', {
 	templateUrl: '/static/app/persons-page/person-page.template.html',
 	controller: ['$http', function PhoneListController($http) {
 		var self = this;
-		self.buttonAddChangeText = {
-			add: 'Создать',
-			change: 'Редактировать'
-		}
+		self.validation_text_selectors = {
+		    // селекторы для элементов с текстом валидации
+           first_name: '#firstname-valid',
+           last_name: '#lastname-valid',
+           father_name: '#fathername-valid',
+           date_text: '#date-valid',
+        };
 		self.clean_user_data = function() {
 			/** 
 			 * сбрасывает заполнение для формы 
@@ -19,7 +22,7 @@ component('personsPage', {
 			 self.first_name = '';
 			 self.last_name = '';
 			 self.father_name = '';
-			 self.unix_time = '';
+			 self.unix_time = new Date().getTime() / 1000;
 			 self.editing = false; // находится ли карточка в режиме редактирования
 			}
 		self.clean_user_data(); // инициализируем форму пользователя
@@ -31,9 +34,20 @@ component('personsPage', {
 			self.persons.forEach(function (item) {
 				// добавляем поле, по которому будет фильтровать
 				item.fio = `${item.first_name} ${item.last_name} ${item.father_name}`
-			})
+			});
 		});
-	}
+	};
+	self.show_validation_text = function (selector) {
+	    // отображает сообщение об ошибке
+        $(selector).removeClass('faded');
+    };
+	self.hide_validation_text = function(selector) {
+	    $(selector).addClass('faded');
+    };
+	self.hide_all_validation = function() {
+	    // скрываем всю валидацию
+        $('.valid-text').addClass('faded');
+    };
 	self.accept_user = function ($ctrl) {
 			// принимает вывод с формы пользователя
 			// и отправляет запрос на сервер на добавление/изменение
@@ -47,7 +61,7 @@ component('personsPage', {
 				last_name: self.last_name,
 				father_name: self.father_name,
 				unix_time: unix_time
-			}
+			};
 			$http.get('changeperson', {params: params})
 			.then(function(response) {
 				self.reload_users();
@@ -71,6 +85,7 @@ component('personsPage', {
 		}
 		self.edit_user = function(id) {
 			// передает пользователя в форму редактирования
+            self.hide_all_validation();
 			self.open_modal();
 			let user = _.findWhere(self.persons, {id: id})
 			self.id = user.id;
@@ -85,9 +100,9 @@ component('personsPage', {
 			let day = date.getDate();
 			day = day < 10 ? "0" + day : day;
 			let month = date.getMonth();
-			month = month < 10 ? "0" + month : month
+			month = month < 10 ? "0" + month : month;
 			return `${day}.${month}.${date.getFullYear()}`;
-		}
+		};
 		self.click_remove = function(personId) {
 			// обработка клика по кнопке Удалить
 			swal({
@@ -98,8 +113,8 @@ component('personsPage', {
 			.then((willDelete) => {
 				if (willDelete) {
 					self.delete_user(personId);
-					swal("Пользователь был удален", {
-					});
+					// swal("Пользователь был удален", {
+					// });
 				} else {
 				}
 			});
@@ -109,16 +124,40 @@ component('personsPage', {
 			$.modal.close();
 			self.clean_user_data();
 		}
-		self.accept_modal = function () {
+		self.accept_modal = function (addPersonForm) {
 			// обработка подтверждения формы в модалке
-			self.accept_user();
-			self.close_modal();
-		}
+            // валидируем
+            if (self.first_name === '') {
+                self.show_validation_text(
+                    self.validation_text_selectors.first_name
+                );
+            }
+            if (self.last_name === '') {
+                self.show_validation_text(
+                    self.validation_text_selectors.last_name
+                );
+            }
+            if (self.father_name === '') {
+                self.show_validation_text(
+                    self.validation_text_selectors.father_name
+                );
+            }
+            if (isNaN(self.unix_time)) {
+                self.show_validation_text(
+                    self.validation_text_selectors.date_text
+                );
+            }
+            if (addPersonForm.$valid) {
+                self.accept_user();
+                self.close_modal();
+            }
+		};
 		self.click_add_user = function () {
 			// обработка нажатия на кнопку Добавить нового пользователя
+            self.hide_all_validation();
 			self.clean_user_data();
 			self.open_modal();
-		}
+		};
 		self.reload_users();
 	}]
 });

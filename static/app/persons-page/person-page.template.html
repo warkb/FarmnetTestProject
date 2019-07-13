@@ -1,79 +1,99 @@
 <div hidden>
-	<form id="add-person-form">
-		<!-- модалочка -->
-		<fieldset>
-			<input type="hidden" ng-model="$ctrl.id" value="0">
-			<p>
-				<label for="">Фамилия</label>
-				<br/>
-				<input required type="text" class="form-control" ng-model="$ctrl.last_name">
-			</p>
-			<p>
-				<label for="">Имя</label>
-				<br/>
-				<input required type="text" class="form-control" ng-model="$ctrl.first_name">
-			</p>
-			<p>
-				<label for="">Отчество</label>
-				<br/>
-				<input required type="text" class="form-control" ng-model="$ctrl.father_name">
-			</p>
-			<p>
-				<label for="">Дата</label>
-				<br>
-				<input required type="number" class="form-control" ng-model="$ctrl.unix_time">
-			</p>
-			<div class="buttons">
-				<button class="btn btn-secondary" tabindex="0" ng-click="$ctrl.close_modal()">
-					Отмена
-				</button>
-				<button type="submit" ng-click="$ctrl.accept_modal()" id="form-accept" class="btn btn-success">
-					{{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
-				</button>
-			</div>
-		</fieldset>
-	</form>
+    <form id="add-person-form" name="addPersonForm">
+        <!-- модалочка -->
+        <fieldset>
+            <input type="hidden" ng-model="$ctrl.id" value="0">
+            <p>
+                <label for="">Фамилия</label>
+                <br/>
+                <input
+                        required type="text"
+                        class="form-control"
+                        ng-model="$ctrl.last_name"
+                        ng-change="$ctrl.hide_validation_text('#lastname-valid')">
+                <div id="lastname-valid" class="valid-text faded">Минимум один символ</div>
+            </p>
+            <p>
+                <label for="">Имя</label>
+                <br/>
+                <input
+                        required type="text"
+                        class="form-control"
+                        ng-model="$ctrl.first_name"
+                        ng-change="$ctrl.hide_validation_text('#firstname-valid')">
+                <div id="firstname-valid" class="valid-text faded">Минимум один символ</div>
+            </p>
+            <p>
+                <label for="">Отчество</label>
+                <br/>
+                <input
+                        required type="text"
+                        class="form-control"
+                        ng-model="$ctrl.father_name"
+                        ng-change="$ctrl.hide_validation_text('#fathername-valid')">
+                <div id="fathername-valid" class="valid-text faded">Минимум один символ</div>
+            </p>
+            <p>
+                <label for="">Дата</label>
+                <br>
+                <input
+                        required type="number"
+                        class="form-control"
+                        ng-model="$ctrl.unix_time"
+                        ng-change="$ctrl.hide_validation_text('#date-valid')">
+                <div id="date-valid" class="valid-text faded">Дата не может быть пустой</div>
+            </p>
+            <div class="buttons">
+                <button class="btn btn-secondary" tabindex="0" ng-click="$ctrl.close_modal()">
+                    Отмена
+                </button>
+                <button type="submit" ng-click="$ctrl.accept_modal(addPersonForm)" id="form-accept" class="btn btn-success">
+                    {{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
+                </button>
+            </div>
+        </fieldset>
+    </form>
 </div>
 
 <div id="users-page" class="page">
-	<div id="persons-list">
-		<div id="control-panel" class="card">
-			<!-- панель управления -->
-			<label>Фильтрация:</label>
-			<div></div>
-			<input id="filter-input" class="form-control" ng-model="search.fio">
-			<label>Сортировка:</label>
-			<p>
-				<button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="last_name"'>
-					<img src="/static/img/sort-by-alphabet-asc.png" alt="">
-				</button>
-				<button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-last_name"'>
-					<img src="/static/img/sort-by-alphabet-desc.png" alt="">
-				</button>
-				<button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="unix_time"'>
-					<img src="/static/img/sort-by-time-asc.png" alt="">
-				</button>
-				<button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-unix_time"'>
-					<img src="/static/img/sort-by-time-desc.png" alt="">
-				</button>
-			</p>
-			<button class="btn btn-success" ng-click="$ctrl.click_add_user()">
-				Добавить нового пользователя
-			</button>
-		</div>
-		<div ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:search" class="card">
-			<label>Фамилия:</label>
-			<p>{{person.last_name}}</p>
-			<label>Имя:</label>
-			<p>{{person.first_name}}</p>
-			<label>Отчество:</label>
-			<p>{{person.father_name}}</p>
-			<label>Дата рождения:</label>
-			<p>{{ $ctrl.unixtime_to_date(person.unix_time) }}</p>
-			<div class="buttons">
-				<button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
-				<button ng-click="$ctrl.click_remove(person.id)" class="btn btn-danger">Удалить</button>
-			</div>
-		</div>
-	</div>
+    <div id="persons-list">
+        <div id="control-panel" class="card">
+            <!-- панель управления -->
+            <label>Фильтрация:</label>
+            <div></div>
+            <input id="filter-input" class="form-control" ng-model="search.fio">
+            <label>Сортировка:</label>
+            <p>
+                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="last_name"'>
+                    <img src="/static/img/sort-by-alphabet-asc.png" alt="">
+                </button>
+                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-last_name"'>
+                    <img src="/static/img/sort-by-alphabet-desc.png" alt="">
+                </button>
+                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="unix_time"'>
+                    <img src="/static/img/sort-by-time-asc.png" alt="">
+                </button>
+                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-unix_time"'>
+                    <img src="/static/img/sort-by-time-desc.png" alt="">
+                </button>
+            </p>
+            <button class="btn btn-success" ng-click="$ctrl.click_add_user()">
+                Добавить нового пользователя
+            </button>
+        </div>
+        <div ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:search" class="card">
+            <label>Фамилия:</label>
+            <p>{{person.last_name}}</p>
+            <label>Имя:</label>
+            <p>{{person.first_name}}</p>
+            <label>Отчество:</label>
+            <p>{{person.father_name}}</p>
+            <label>Дата рождения:</label>
+            <p>{{ $ctrl.unixtime_to_date(person.unix_time) }}</p>
+            <div class="buttons">
+                <button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
+                <button ng-click="$ctrl.click_remove(person.id)" class="btn btn-danger">Удалить</button>
+            </div>
+        </div>
+    </div>
 </div>

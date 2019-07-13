@@ -1,9 +1,28 @@
+.faded {
+	/*скрывает но не удаляет элемент из потока*/
+    opacity: 0;
+}
+
+.valid-text {
+	/*сообщение об ошибке валидации*/
+	margin-top: -18px;
+	margin-bottom: -14px;
+	color: red;
+	padding-left: 3px;
+}
+
 #persons-list {
+	/*содержимое страницы*/
 	width: 400px;
 	margin: 0 auto;
 }
 
+#persons-list p {
+	margin-bottom: 0px;
+}
+
 #persons-list .card {
+	/*карточка на странице*/
 	display: block;
 	color: black;
 	padding: 30px;
@@ -56,7 +75,8 @@
 /*=====================================================*/
 /* Модалка */
 #add-person-form {
-	height: 400px;
+	height: 415px;
 	margin: 22px;
 	overflow: visible;
 }
+
