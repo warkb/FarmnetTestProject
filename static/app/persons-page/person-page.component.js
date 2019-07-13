@@ -116,6 +116,7 @@ component('personsPage', {
 		}
 		self.click_add_user = function () {
 			// обработка нажатия на кнопку Добавить нового пользователя
+			self.clean_user_data();
 			self.open_modal();
 		}
 		self.reload_users();
