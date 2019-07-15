@@ -80,3 +80,23 @@
 	overflow: visible;
 }
 
+#date-input {
+    /*инпут с датой*/
+    border-radius: 0px 5px 5px 0;
+    /*для старых сафари и хромов*/
+    -webkit-border-radius: 0px 5px 5px 0;
+    display: inline;
+    width: 393px;
+}
+
+#date-button {
+    /*кнопка с часиками*/
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    margin-top: -5px;
+    margin-right: -4px;
+}
+
+#date-button > img {
+    width: 20px;
+}

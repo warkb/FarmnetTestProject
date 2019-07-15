@@ -36,8 +36,16 @@
             <p>
                 <label for="">Дата</label>
                 <br>
+                <button
+                        type="button"
+                        id="date-button"
+                        class="btn btn-secondary">
+                    <img src="/static/img/clock-circular-outline.png" alt="">
+                </button>
                 <input
-                        required type="number"
+
+                        required type="text"
+                        id="date-input"
                         class="form-control"
                         ng-model="$ctrl.unix_time"
                         ng-change="$ctrl.hide_validation_text('#date-valid')">

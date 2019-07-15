@@ -392,66 +392,10 @@
 	"buffers":
 	[
 		{
-			"file": "todo.todo",
+			"contents": "<!doctype html>\n<html ng-app=\"questApp\">\n<head>\n\t<meta charset=\"utf-8\">\n\t<link rel=\"stylesheet\" href=\"css/mystyles.css\" />\n</head>\n<body>\n\t<div  ng-controller=\"QuestionController\">\n\t\t<div class=\"quest\">\n\t\t\t<h3>{{question.text}}</h3>\n\t\t\t<p>{{question.author}} </p> <p><i>{{question.date}}</i></p>\n\t\t</div>\n\t\t<h3>Ответы</h3>\n\t\t<div class=\"answers\">\n\t\t\t<div ng-repeat=\"answer in question.answers\" class=\"answer\">\n\t\t\t\t<div class=\"vote\">\n\t\t\t\t\t<a class=\"vote-up\" ng-click=\"voteUp(answer)\"></a>\n\t\t\t\t\t<span class=\"rate\">{{answer.rate}}</span>\n\t\t\t\t\t<a class=\"vote-down\" ng-click=\"voteDown(answer)\"></a>\n\t\t\t\t</div>\n\t\t\t\t<b>{{answer.text | formatText}}</b>\n\t\t\t\t<p>{{answer.author}}</p>\n\t\t\t\t<p><i>{{answer.date}}</i></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div ng-controller=\"AnswerController\">\n\t\t<form name=\"answerForm\">\n\t\t\t<fieldset>\n\t\t\t\t<p><label for=\"answerText\">Текст ответа</label>\n\t\t\t\t\t<input id=\"answerText\" ng-model=\"answer.text\" required placeholder=\"Введите ответ\" /></p>\n\t\t\t\t\t<p><label for=\"answerAuthor\">Автор ответа</label>\n\t\t\t\t\t\t<input id=\"answerAuthor\" ng-model=\"answer.author\" required placeholder=\"Введите автора\" /></p>\n\t\t\t\t\t\t<p><label for=\"answerDate\">Дата ответа</label>\n\t\t\t\t\t\t\t<input id=\"answerDate\" ng-model=\"answer.date\" required  ng-pattern=\"/\\d\\d/\\d\\d/\\d\\d\\d\\d/\" placeholder=\"Введите дату\" /></p>\n\t\t\t\t\t\t</fieldset>\n\t\t\t\t\t\t<button type=\"submit\" ng-click=\"save(answer, answerForm)\">Сохранить</button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t\t<script src=\"js/lib/angular.min.js\"></script>\n\t\t\t\t<script src=\"js/app.js\"></script>\n\t\t\t\t<script src=\"js/controllers/QuestionController.js\"></script>\n\t\t\t\t<script src=\"js/controllers/AnswerController.js\"></script>\n\t\t\t\t<script src=\"js/filter.js\"></script>\n\t\t\t</body>\n\t\t\t</html>",
 			"settings":
 			{
-				"buffer_size": 370,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "static/app/persons-page/person-page.component.js",
-			"settings":
-			{
-				"buffer_size": 3581,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "static/app/persons-page/person-page.template.html",
-			"settings":
-			{
-				"buffer_size": 2716,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Microsoft Windows [Version 6.1.7601]                                              \n(c) Корпорация Майкрософт, 2009. Все права защищены.                              \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git config —global alias.addall \"add --a​‌​\nll\"                                                                               \nerror: key does not contain a section: —global                                    \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git config --global alias.addall \"add --​‌​\nall\"                                                                              \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git config --global alias.cm \"commit\"   \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git config --global alias.pushm \"push or​‌​\nigin master\"                                                                      \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git config --global alias.st \"status\"   \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git st                                  \nOn branch master                                                                  \nYour branch is up to date with 'origin/master'.                                   \n                                                                                  \nChanges not staged for commit:                                                    \n  (use \"git add <file>...\" to update what will be committed)                      \n  (use \"git checkout -- <file>...\" to discard changes in working directory)       \n                                                                                  \n        modified:   farmnet.sublime-workspace                                     \n        modified:   static/app/persons-page/person-page.template.html             \n        modified:   static/img/sort-by-alphabet-asc.png                           \n        modified:   static/img/sort-by-alphabet-desc.png                          \n        modified:   static/img/sort-by-time-asc.png                               \n        modified:   static/img/sort-by-time-desc.png                              \n                                                                                  \nUntracked files:                                                                  \n  (use \"git add <file>...\" to include in what will be committed)                  \n                                                                                  \n        static/img/clock-circular-outline.png                                     \n        static/img/sort-by-alphabet-asc.pdn                                       \n                                                                                  \nno changes added to commit (use \"git add\" and/or \"git commit -a\")                 \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git addall                              \nwarning: LF will be replaced by CRLF in farmnet.sublime-workspace.                \nThe file will have its original line endings in your working directory            \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git st                                  \nOn branch master                                                                  \nYour branch is up to date with 'origin/master'.                                   \n                                                                                  \nChanges to be committed:                                                          \n  (use \"git reset HEAD <file>...\" to unstage)                                     \n                                                                                  \n        modified:   farmnet.sublime-workspace                                     \n        modified:   static/app/persons-page/person-page.template.html             \n        new file:   static/img/clock-circular-outline.png                         \n        new file:   static/img/sort-by-alphabet-asc.pdn                           \n        modified:   static/img/sort-by-alphabet-asc.png                           \n        modified:   static/img/sort-by-alphabet-desc.png                          \n        modified:   static/img/sort-by-time-asc.png                               \n        modified:   static/img/sort-by-time-desc.png                              \n                                                                                  \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git cm -m\"иконки сделал\"                \n[master 9c0e9f4] иконки сделал                                                    \n 8 files changed, 25 insertions(+), 28 deletions(-)                               \n create mode 100644 static/img/clock-circular-outline.png                         \n create mode 100644 static/img/sort-by-alphabet-asc.pdn                           \n rewrite static/img/sort-by-alphabet-asc.png (99%)                                \n rewrite static/img/sort-by-alphabet-desc.png (99%)                               \n rewrite static/img/sort-by-time-asc.png (99%)                                    \n rewrite static/img/sort-by-time-desc.png (99%)                                   \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git pushm                               \nEnumerating objects: 25, done.                                                    \nCounting objects: 100% (22/22), done.                                             \nDelta compression using up to 4 threads                                           \nCompressing objects: 100% (14/14), done.                                          \nWriting objects: 100% (14/14), 111.39 KiB | 10.13 MiB/s, done.                    \nTotal 14 (delta 5), reused 0 (delta 0)                                            \nremote: Resolving deltas: 100% (5/5), completed with 5 local objects.             \nremote:                                                                           \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch \n(1 moderate). To find out more, visit:                                            \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts           \nremote:                                                                           \nTo https://github.com/warkb/FarmnetTestProject.git                                \n   a93eb32..9c0e9f4  master -> master                                             \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git addall                              \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git config --global alias.adda \"add --al​‌​\nl\"                                                                                \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git adda                                \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git cm -m\"Модалка закрывается при клике \nпо кнопкам\"                                                                       \n[master 2d3e604] Модалка закрывается при клике по кнопкам                         \n 4 files changed, 18 insertions(+), 7 deletions(-)                                \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git pushm                               \nEnumerating objects: 19, done.                                                    \nCounting objects: 100% (19/19), done.                                             \nDelta compression using up to 4 threads                                           \nCompressing objects: 100% (10/10), done.                                          \nWriting objects: 100% (10/10), 1.35 KiB | 690.00 KiB/s, done.                     \nTotal 10 (delta 8), reused 0 (delta 0)                                            \nremote: Resolving deltas: 100% (8/8), completed with 8 local objects.             \nremote:                                                                           \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch \n(1 moderate). To find out more, visit:                                            \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts           \nremote:                                                                           \nTo https://github.com/warkb/FarmnetTestProject.git                                \n   9c0e9f4..2d3e604  master -> master                                             \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git adda                                \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git st                                  \nOn branch master                                                                  \nYour branch is up to date with 'origin/master'.                                   \n                                                                                  \nChanges to be committed:                                                          \n  (use \"git reset HEAD <file>...\" to unstage)                                     \n                                                                                  \n        modified:   static/app/persons-page/person-page.component.js              \n        modified:   static/app/persons-page/person-page.template.html             \n                                                                                  \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git cm -m\"Сделал фильтрацию строго по фи​‌​\nо\"                                                                                \n[master 53e69b9] Сделал фильтрацию строго по фио                                  \n 2 files changed, 6 insertions(+), 2 deletions(-)                                 \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git pushm                               \nEnumerating objects: 13, done.                                                    \nCounting objects: 100% (13/13), done.                                             \nDelta compression using up to 4 threads                                           \nCompressing objects: 100% (7/7), done.                                            \nWriting objects: 100% (7/7), 836 bytes | 418.00 KiB/s, done.                      \nTotal 7 (delta 5), reused 0 (delta 0)                                             \nremote: Resolving deltas: 100% (5/5), completed with 5 local objects.             \nremote:                                                                           \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch \n(1 moderate). To find out more, visit:                                            \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts           \nremote:                                                                           \nTo https://github.com/warkb/FarmnetTestProject.git                                \n   2d3e604..53e69b9  master -> master                                             \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git adda                                \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git cm -m\"Сделал добавление пользователя​‌​\n по клику на кнопку\"                                                              \n[master 3cb34fc] Сделал добавление пользователя по клику на кнопку                \n 4 files changed, 27 insertions(+), 10 deletions(-)                               \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>git pushm                               \nEnumerating objects: 17, done.                                                    \nCounting objects: 100% (17/17), done.                                             \nDelta compression using up to 4 threads                                           \nCompressing objects: 100% (9/9), done.                                            \nWriting objects: 100% (9/9), 1.33 KiB | 683.00 KiB/s, done.                       \nTotal 9 (delta 6), reused 0 (delta 0)                                             \nremote: Resolving deltas: 100% (6/6), completed with 6 local objects.             \nremote:                                                                           \nremote: GitHub found 1 vulnerability on warkb/FarmnetTestProject's default branch \n(1 moderate). To find out more, visit:                                            \nremote:      https://github.com/warkb/FarmnetTestProject/network/alerts           \nremote:                                                                           \nTo https://github.com/warkb/FarmnetTestProject.git                                \n   53e69b9..3cb34fc  master -> master                                             \n                                                                                  \nC:\\Users\\WarKB\\Desktop\\FarmnetTestProject>",
-			"settings":
-			{
-				"buffer_size": 14336,
-				"line_ending": "Windows",
-				"name": "Администратор:  ",
-				"scratch": true
-			}
-		},
-		{
-			"file": "static/css/persons-list.css",
-			"settings":
-			{
-				"buffer_size": 1057,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "static/app/index.html",
-			"settings":
-			{
-				"buffer_size": 2069,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "static/app/app.module.js",
-			"settings":
-			{
-				"buffer_size": 142,
-				"encoding": "UTF-8",
+				"buffer_size": 1706,
 				"line_ending": "Windows"
 			}
 		}
@@ -586,6 +530,14 @@
 	],
 	"file_history":
 	[
+		"/C/Users/WarKB/PycharmProjects/moba/runtime.txt",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/app.module.js",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/index.html",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css/persons-list.css",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.template.html",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.component.js",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/todo.todo",
+		"/C/Users/WarKB/Downloads/JetBrains WebStorm 2018.1.4/JetBrains.WebStorm.2018.1.4.Incl.KeyMaker.14TH.BIRTHDAY-DVT/install.txt",
 		"/C/Users/Wladimir/Desktop/Сакральные знания/Хоткеи.txt",
 		"/C/Users/Wladimir/Downloads/socio72/socio72/static/html/task-list.html",
 		"/C/Users/Wladimir/Documents/FarmnetTestProject/static/app/index.html",
@@ -705,19 +657,11 @@
 		"/D/Vladimir_SpaceApp/Documents/MySuperTrello/MySuperTrello/urls.py",
 		"/C/Users/Redline/AppData/Local/Temp/scp43846/home/www/drujite.ru/apps/drujite/views.py",
 		"/C/Users/Redline/Downloads/Telegram Desktop/CacheTree.cs",
-		"/C/Users/Redline/AppData/Local/Temp/scp36461/home/www/drujite.ru/apps/drujite/jinja2_templates/camps/base.jinja2",
-		"/C/Users/Redline/AppData/Local/Temp/scp05273/home/www/index.html",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/app.module.js",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-list/phone-list.module.js",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/phone-list/phone-list.component.js",
-		"/C/Users/Redline/AppData/Local/Temp/scp35333/home/www/drujite.ru/apps/drujite/django_templates/partials/base/menu.html",
-		"/C/Users/Redline/AppData/Local/Temp/scp34212/home/www/drujite.ru/async_server.py",
-		"/C/Users/Redline/Documents/AngularJsTutorial/angular-phonecat/app/index.html",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/DfmAutoTests/test_item_sort.py"
+		"/C/Users/Redline/AppData/Local/Temp/scp36461/home/www/drujite.ru/apps/drujite/jinja2_templates/camps/base.jinja2"
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -889,265 +833,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "todo.todo",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 370,
+						"buffer_size": 1706,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								202,
+								202
 							]
 						],
 						"settings":
 						{
-							"apply_syntax_touched": true,
-							"git_gutter_is_enabled": true,
-							"plain_tasks_remain_time_phantoms":
-							[
-							],
-							"syntax": "Packages/PlainTasks/PlainTasks.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 2,
-								"tabSize": 2
-							}
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "static/app/persons-page/person-page.component.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3581,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								332,
-								332
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "static/app/persons-page/person-page.template.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2716,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								847,
-								847
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14336,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14336,
-								14336
-							]
-						],
-						"settings":
-						{
-							"__vi_external_disable": true,
-							"auto_complete": false,
-							"auto_complete_commit_on_tab": false,
-							"bracket_highlighter.clone_locations":
-							{
-							},
-							"bracket_highlighter.ignore": true,
-							"caret_style": "blink",
-							"color_scheme": "Terminus.sublime-color-scheme",
-							"draw_centered": false,
-							"draw_indent_guides": false,
-							"draw_white_space": "none",
-							"gutter": false,
-							"highlight_line": false,
-							"is_widget": true,
-							"scroll_past_end": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"terminus.highlight_counter": 125,
-							"terminus_view": true,
-							"terminus_view.args":
-							{
-								"auto_close": true,
-								"cmd":
-								[
-									"cmd.exe"
-								],
-								"config_name": "Command Prompt",
-								"cwd": "C:\\Users\\WarKB\\Desktop\\FarmnetTestProject",
-								"env":
-								{
-									"TERMINUS_SUBLIME": "1",
-									"TERM_PROGRAM": "Terminus-Sublime"
-								},
-								"panel_name": null,
-								"tag": null,
-								"title": null
-							},
-							"terminus_view.key.ctrl+k": true,
-							"terminus_view.key.ctrl+p": true,
-							"terminus_view.natural_keyboard": true,
-							"terminus_view.panel_name": null,
-							"terminus_view.tag": null,
-							"terminus_view.viewport_y": 3700.0,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3700.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "static/css/persons-list.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								328,
-								328
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "static/app/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1006,
-								1006
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 504.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "static/app/app.module.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 142,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								142,
-								142
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
 					"type": "text"
 				}
 			]
