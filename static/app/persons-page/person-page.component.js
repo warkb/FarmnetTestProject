@@ -32,7 +32,15 @@ angular.module('farmNetApp').component('personsPage', {
             self.father_name = '';
             self.date = self.unixtime_to_date(new Date().getTime());
             self.editing = false; // находится ли карточка в режиме редактирования
-        }
+        };
+        self.string2unixtime = function(str) {
+            // преобразует строку с Русской датой в unixtime
+            console.log('string2unixtime');
+            console.log(str);
+            let date = new Date(str.replace(/(\d+).(\d+).(\d+)/, '$3/$2/$1'));
+            console.log(date.getTime());
+            return date.getTime();
+        };
         self.clean_user_data(); // инициализируем форму пользователя
         self.orderProp = 'last_name'; // поле для сортировки
         self.reload_users = function () {
@@ -40,8 +48,9 @@ angular.module('farmNetApp').component('personsPage', {
             $http.get('allpersons').then(function (response) {
                 self.persons = JSON.parse(response.data);
                 self.persons.forEach(function (item) {
-                    // добавляем поле, по которому будет фильтровать
-                    item.fio = `${item.first_name} ${item.last_name} ${item.father_name}`
+                    // добавляем поля, по котором будет фильтровать
+                    item.fio = `${item.first_name} ${item.last_name} ${item.father_name}`;
+                    item.unixtime = self.string2unixtime(item.date);
                 });
             });
         };
@@ -170,7 +179,6 @@ angular.module('farmNetApp').component('personsPage', {
 
         // отображаем
         $('#date-button').click(function (event) {
-            console.log('click');
             $('#date-input').datetimepicker('show');
         });
 

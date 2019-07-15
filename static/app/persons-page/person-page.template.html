@@ -78,10 +78,12 @@
                 <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-last_name"'>
                     <img src="/static/img/sort-by-alphabet-desc.png" alt="">
                 </button>
-                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="date"'>
+                <button class="sort-button btn btn-secondary"
+                        ng-click='$ctrl.orderProp="unixtime"'>
                     <img src="/static/img/sort-by-time-asc.png" alt="">
                 </button>
-                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-unix_time"'>
+                <button class="sort-button btn btn-secondary"
+                        ng-click='$ctrl.orderProp="-unixtime"'>
                     <img src="/static/img/sort-by-time-desc.png" alt="">
                 </button>
             </p>
