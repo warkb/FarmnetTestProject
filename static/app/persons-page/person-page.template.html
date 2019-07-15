@@ -47,7 +47,7 @@
                         required type="text"
                         id="date-input"
                         class="form-control"
-                        ng-model="$ctrl.unix_time"
+                        ng-model="$ctrl.date"
                         ng-change="$ctrl.hide_validation_text('#date-valid')">
                 <div id="date-valid" class="valid-text faded">Дата не может быть пустой</div>
             </p>
@@ -78,7 +78,7 @@
                 <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-last_name"'>
                     <img src="/static/img/sort-by-alphabet-desc.png" alt="">
                 </button>
-                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="unix_time"'>
+                <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="date"'>
                     <img src="/static/img/sort-by-time-asc.png" alt="">
                 </button>
                 <button class="sort-button btn btn-secondary" ng-click='$ctrl.orderProp="-unix_time"'>
@@ -97,7 +97,7 @@
             <label>Отчество:</label>
             <p>{{person.father_name}}</p>
             <label>Дата рождения:</label>
-            <p>{{ $ctrl.unixtime_to_date(person.unix_time) }}</p>
+            <p>{{ person.date }}</p>
             <div class="buttons">
                 <button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
                 <button ng-click="$ctrl.click_remove(person.id)" class="btn btn-danger">Удалить</button>

@@ -11,6 +11,16 @@ angular.module('farmNetApp').component('personsPage', {
             father_name: '#fathername-valid',
             date_text: '#date-valid',
         };
+        self.unixtime_to_date = function (unix_time) {
+            // преобразует время в формате date в понятную строку с датой
+            console.log(unix_time);
+            let date = new Date(unix_time);
+            let day = date.getDate();
+            day = day < 10 ? "0" + day : day;
+            let month = date.getMonth() + 1;
+            month = month < 10 ? "0" + month : month;
+            return `${day}.${month}.${date.getFullYear()}`;
+        };
         self.clean_user_data = function () {
             /**
              * сбрасывает заполнение для формы
@@ -20,7 +30,7 @@ angular.module('farmNetApp').component('personsPage', {
             self.first_name = '';
             self.last_name = '';
             self.father_name = '';
-            self.unix_time = new Date().getTime() / 1000;
+            self.date = self.unixtime_to_date(new Date().getTime());
             self.editing = false; // находится ли карточка в режиме редактирования
         }
         self.clean_user_data(); // инициализируем форму пользователя
@@ -49,16 +59,13 @@ angular.module('farmNetApp').component('personsPage', {
         self.accept_user = function ($ctrl) {
             // принимает вывод с формы пользователя
             // и отправляет запрос на сервер на добавление/изменение
-            let unix_time = parseInt(self.unix_time);
-            if (isNaN(unix_time)) {
-                unix_time = 0;
-            }
+            let date = self.date;
             let params = {
                 id: self.id,
                 first_name: self.first_name,
                 last_name: self.last_name,
                 father_name: self.father_name,
-                unix_time: unix_time
+                date: date
             };
             $http.get('changeperson', {params: params})
                 .then(function (response) {
@@ -90,17 +97,8 @@ angular.module('farmNetApp').component('personsPage', {
             self.first_name = user.first_name;
             self.last_name = user.last_name;
             self.father_name = user.father_name;
-            self.unix_time = user.unix_time;
+            self.date = user.date;
         }
-        self.unixtime_to_date = function (unix_time) {
-            // преобразует время в формате unix_time в понятную строку с датой
-            let date = new Date(unix_time * 1000);
-            let day = date.getDate();
-            day = day < 10 ? "0" + day : day;
-            let month = date.getMonth();
-            month = month < 10 ? "0" + month : month;
-            return `${day}.${month}.${date.getFullYear()}`;
-        };
         self.click_remove = function (personId) {
             // обработка клика по кнопке Удалить
             swal({
@@ -140,7 +138,7 @@ angular.module('farmNetApp').component('personsPage', {
                     self.validation_text_selectors.father_name
                 );
             }
-            if (isNaN(self.unix_time)) {
+            if (isNaN(self.date)) {
                 self.show_validation_text(
                     self.validation_text_selectors.date_text
                 );
