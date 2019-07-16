@@ -48,6 +48,7 @@
                         class="form-control"
                         ng-model="$ctrl.date"
                         ng-change="$ctrl.hide_validation_text('#date-valid')">
+                <div id="dt-picker-text" class="form-control">{{$ctrl.date}}</div>
                 <div id="date-valid" class="valid-text faded">Дата не может быть пустой</div>
             </p>
             <div class="buttons">
