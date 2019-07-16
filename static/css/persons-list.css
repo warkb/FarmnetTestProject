@@ -87,6 +87,18 @@
     -webkit-border-radius: 0px 5px 5px 0;
     display: inline;
     width: 393px;
+	/*скрываем инпут*/
+	opacity: 0;
+	position: absolute;
+}
+
+#dt-picker-text {
+	/*текст с датой в модалке*/
+	border-radius: 0px 5px 5px 0;
+	/*для старых сафари и хромов*/
+	-webkit-border-radius: 0px 5px 5px 0;
+	display: inline;
+	width: 393px;
 }
 
 #date-button {

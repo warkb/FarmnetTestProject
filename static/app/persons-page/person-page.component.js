@@ -173,7 +173,7 @@ angular.module('farmNetApp').component('personsPage', {
         $('#date-input').datetimepicker(
             {
                 timepicker: false,
-                format: 'd.m.Y',
+                format: 'd.m.Y'
             }
         );
 
