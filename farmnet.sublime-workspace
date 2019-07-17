@@ -391,14 +391,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "<!doctype html>\n<html ng-app=\"questApp\">\n<head>\n\t<meta charset=\"utf-8\">\n\t<link rel=\"stylesheet\" href=\"css/mystyles.css\" />\n</head>\n<body>\n\t<div  ng-controller=\"QuestionController\">\n\t\t<div class=\"quest\">\n\t\t\t<h3>{{question.text}}</h3>\n\t\t\t<p>{{question.author}} </p> <p><i>{{question.date}}</i></p>\n\t\t</div>\n\t\t<h3>Ответы</h3>\n\t\t<div class=\"answers\">\n\t\t\t<div ng-repeat=\"answer in question.answers\" class=\"answer\">\n\t\t\t\t<div class=\"vote\">\n\t\t\t\t\t<a class=\"vote-up\" ng-click=\"voteUp(answer)\"></a>\n\t\t\t\t\t<span class=\"rate\">{{answer.rate}}</span>\n\t\t\t\t\t<a class=\"vote-down\" ng-click=\"voteDown(answer)\"></a>\n\t\t\t\t</div>\n\t\t\t\t<b>{{answer.text | formatText}}</b>\n\t\t\t\t<p>{{answer.author}}</p>\n\t\t\t\t<p><i>{{answer.date}}</i></p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div ng-controller=\"AnswerController\">\n\t\t<form name=\"answerForm\">\n\t\t\t<fieldset>\n\t\t\t\t<p><label for=\"answerText\">Текст ответа</label>\n\t\t\t\t\t<input id=\"answerText\" ng-model=\"answer.text\" required placeholder=\"Введите ответ\" /></p>\n\t\t\t\t\t<p><label for=\"answerAuthor\">Автор ответа</label>\n\t\t\t\t\t\t<input id=\"answerAuthor\" ng-model=\"answer.author\" required placeholder=\"Введите автора\" /></p>\n\t\t\t\t\t\t<p><label for=\"answerDate\">Дата ответа</label>\n\t\t\t\t\t\t\t<input id=\"answerDate\" ng-model=\"answer.date\" required  ng-pattern=\"/\\d\\d/\\d\\d/\\d\\d\\d\\d/\" placeholder=\"Введите дату\" /></p>\n\t\t\t\t\t\t</fieldset>\n\t\t\t\t\t\t<button type=\"submit\" ng-click=\"save(answer, answerForm)\">Сохранить</button>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t\t<script src=\"js/lib/angular.min.js\"></script>\n\t\t\t\t<script src=\"js/app.js\"></script>\n\t\t\t\t<script src=\"js/controllers/QuestionController.js\"></script>\n\t\t\t\t<script src=\"js/controllers/AnswerController.js\"></script>\n\t\t\t\t<script src=\"js/filter.js\"></script>\n\t\t\t</body>\n\t\t\t</html>",
-			"settings":
-			{
-				"buffer_size": 1706,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -828,36 +820,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								202,
-								202
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

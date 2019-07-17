@@ -33,7 +33,7 @@ component('logPage', {
 				// если на вводе логина
 				if (self.login.length > 0) {
 					self.step += 1;
-					$('#inputs').animate({left: '-240px'}, 250);
+					$('#inputs').animate({left: '-244px'}, 250);
 					self.button_text = 'Войти';
 				} else {
 					self.validated = false;
