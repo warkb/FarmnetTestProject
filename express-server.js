@@ -7,6 +7,10 @@ const app = express();
 // создаем парсер для данных в формате json
 const jsonParser = express.json();
 const sqlite3 = require('sqlite3').verbose();
+
+// нужен ли тур по сайту
+neet_toor = true;
+
 let db = new sqlite3.Database('./farmnet.db', (err) => {
 	if (err) {
 		console.error(err.message);
@@ -68,7 +72,19 @@ app.get('/delperson', function(request, response) {
 		}
 		response.json(JSON.stringify({id: request.query.id}));
 	});
-})
+});
+
+app.get('/needtour', function (request, response) {
+    obj = {};
+    if (neet_toor) {
+        neet_toor = false;
+        obj.need_tour = true;
+    }
+    else {
+        obj.need_tour = false
+    }
+    response.json(JSON.stringify(obj));
+});
 
 app.get("/", function(request, response){
     // отправляем ответ

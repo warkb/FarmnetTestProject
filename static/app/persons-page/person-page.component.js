@@ -13,7 +13,7 @@ angular.module('farmNetApp').component('personsPage', {
             father_name: '#fathername-valid',
             date_text: '#date-valid',
         };
-        self.run_tour = function() {
+        self.run_tour = function () {
             // запускает тур на сайте
             setTimeout(function () {
                 let intro = introJs();
@@ -50,7 +50,7 @@ angular.module('farmNetApp').component('personsPage', {
                             position: 'bottom'
                         },
                         {
-                            intro: 'Спасибо за внимание'
+                            intro: 'Спасибо за внимание. Этот тур запускается только при первом просмотре после рестарта сервера'
                         }
                     ]
                 });
@@ -78,7 +78,7 @@ angular.module('farmNetApp').component('personsPage', {
             self.date = self.unixtime_to_date(new Date().getTime());
             self.editing = false; // находится ли карточка в режиме редактирования
         };
-        self.string2unixtime = function(str) {
+        self.string2unixtime = function (str) {
             // преобразует строку с Русской датой в unixtime
             let date = new Date(str.replace(/(\d+).(\d+).(\d+)/, '$3/$2/$1'));
             return date.getTime();
@@ -123,16 +123,16 @@ angular.module('farmNetApp').component('personsPage', {
                     self.reload_users();
                 });
             self.clean_user_data(); // сбрасывает форму
-        },
-            self.delete_user = function (id) {
-                // отправляет в базу запрос на удаление пользователя
-                $http.get('delperson', {params: {id: id}})
-                    .then(function (response) {
-                        self.persons = self.persons.filter(function (person) {
-                            return person.id != id;
-                        });
-                    })
-            }
+        };
+        self.delete_user = function (id) {
+            // отправляет в базу запрос на удаление пользователя
+            $http.get('delperson', {params: {id: id}})
+                .then(function (response) {
+                    self.persons = self.persons.filter(function (person) {
+                        return person.id != id;
+                    });
+                })
+        }
         self.open_modal = function () {
             $('#add-person-form').modal({
                 showClose: false,
@@ -224,8 +224,16 @@ angular.module('farmNetApp').component('personsPage', {
             $('#date-input').datetimepicker('show');
         });
 
-        // запускаем тур
-        self.run_tour();
+        // запускаем тур, если нужно
+        $http.get('needtour').then(function (response) {
+            console.log(response.data.need_tour);
+            console.log(response.data);
+
+            if (JSON.parse(response.data).need_tour){
+                // запускаем тур
+                self.run_tour();
+            }
+        });
 
         // действия при закрытии модалки
         $('#add-person-form').on($.modal.CLOSE, function (event, modal) {
