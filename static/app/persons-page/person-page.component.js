@@ -15,8 +15,8 @@ angular.module('farmNetApp').component('personsPage', {
             // запускает тур на сайте
             setTimeout(function () {
                 let intro = introJs();
-                console.log($('#persons-cards'));
                 intro.setOptions({
+                    // overlayOpacity: 0,
                     steps: [
                         {
                             intro: "hello world"
@@ -25,6 +25,11 @@ angular.module('farmNetApp').component('personsPage', {
                             element: '#persons-list',
                             intro: 'карточки с пользователями',
                             position: 'right'
+                        },
+                        {
+                            element: '#adduser-button',
+                            intro: 'кнопочка',
+                            position: 'bottom'
                         }
                     ]
                 });
