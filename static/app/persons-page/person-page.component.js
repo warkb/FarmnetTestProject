@@ -4,6 +4,8 @@ angular.module('farmNetApp').component('personsPage', {
     templateUrl: '/static/app/persons-page/person-page.template.html',
     controller: ['$http', function PhoneListController($http) {
         var self = this;
+        // флаг указывает, должен ли запуститься тур
+        var tourMustBeRunned = true;
         self.validation_text_selectors = {
             // селекторы для элементов с текстом валидации
             first_name: '#firstname-valid',
@@ -16,25 +18,43 @@ angular.module('farmNetApp').component('personsPage', {
             setTimeout(function () {
                 let intro = introJs();
                 intro.setOptions({
-                    // overlayOpacity: 0,
+                    exitOnEsc: true,
+                    exitOnOverlayClick: true,
+                    skipLabel: 'Пропустить',
+                    nextLabel: 'Далее',
+                    prevLabel: 'Назад',
+                    doneLabel: 'Завершить',
                     steps: [
                         {
-                            intro: "hello world"
+                            intro: "Добро пожаловать. Этот тур проведет вас по базовому функционалу приложения"
                         },
                         {
-                            element: '#persons-list',
-                            intro: 'карточки с пользователями',
-                            position: 'right'
+                            element: document.querySelectorAll('#persons-cards > *')[1],
+                            intro: 'Это карточка с пользователем. На ней расположены данные о пользователе, а также кнопки для его редактирования и удаления',
+                            position: 'bottom'
+                        },
+                        {
+                            element: '#filtering',
+                            intro: 'Вводя текст в это поле вы можете фильтровать карточки по ФИО',
+                            position: 'bottom'
+                        },
+                        {
+                            element: '#sorting',
+                            intro: 'С помощью этих кнопок вы можете сортировать карточки по ФИО и времени',
+                            position: 'bottom'
                         },
                         {
                             element: '#adduser-button',
-                            intro: 'кнопочка',
+                            intro: 'Кликните сюда, чтобы добавить нового пользователя',
                             position: 'bottom'
+                        },
+                        {
+                            intro: 'Спасибо за внимание'
                         }
                     ]
                 });
                 intro.start();
-            }, 0);
+            }, 500);
         };
         self.unixtime_to_date = function (unix_time) {
             // преобразует время в формате date в понятную строку с датой
