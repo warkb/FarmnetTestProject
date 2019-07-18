@@ -1,5 +1,7 @@
 // подключение express
 const express = require("express");
+const opn = require('opn');
+
 // создаем объект приложения
 const app = express();
 // создаем парсер для данных в формате json
@@ -75,4 +77,5 @@ app.get("/", function(request, response){
 
 app.listen(port, function () {
 	console.log(`http://localhost:${port}/#!/logon`);
+    opn(`http://localhost:${port}/#!/logon`);
 });

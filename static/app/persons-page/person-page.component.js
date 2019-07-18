@@ -24,6 +24,7 @@ angular.module('farmNetApp').component('personsPage', {
                     nextLabel: 'Далее',
                     prevLabel: 'Назад',
                     doneLabel: 'Завершить',
+                    showStepNumbers: false,
                     steps: [
                         {
                             intro: "Добро пожаловать. Этот тур проведет вас по базовому функционалу приложения"
