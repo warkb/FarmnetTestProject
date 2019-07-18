@@ -11,7 +11,7 @@
                         class="form-control"
                         ng-model="$ctrl.last_name"
                         ng-change="$ctrl.hide_validation_text('#lastname-valid')">
-                <div id="lastname-valid" class="valid-text faded">Минимум один символ</div>
+            <div id="lastname-valid" class="valid-text faded">Минимум один символ</div>
             </p>
             <p>
                 <label for="">Имя</label>
@@ -21,7 +21,7 @@
                         class="form-control"
                         ng-model="$ctrl.first_name"
                         ng-change="$ctrl.hide_validation_text('#firstname-valid')">
-                <div id="firstname-valid" class="valid-text faded">Минимум один символ</div>
+            <div id="firstname-valid" class="valid-text faded">Минимум один символ</div>
             </p>
             <p>
                 <label for="">Отчество</label>
@@ -31,7 +31,7 @@
                         class="form-control"
                         ng-model="$ctrl.father_name"
                         ng-change="$ctrl.hide_validation_text('#fathername-valid')">
-                <div id="fathername-valid" class="valid-text faded">Минимум один символ</div>
+            <div id="fathername-valid" class="valid-text faded">Минимум один символ</div>
             </p>
             <p>
                 <label for="">Дата</label>
@@ -48,14 +48,15 @@
                         class="form-control"
                         ng-model="$ctrl.date"
                         ng-change="$ctrl.hide_validation_text('#date-valid')">
-                <div id="dt-picker-text" class="form-control">{{$ctrl.date}}</div>
-                <div id="date-valid" class="valid-text faded">Дата не может быть пустой</div>
+            <div id="dt-picker-text" class="form-control">{{$ctrl.date}}</div>
+            <div id="date-valid" class="valid-text faded">Дата не может быть пустой</div>
             </p>
             <div class="buttons">
                 <button class="btn btn-secondary" tabindex="0" ng-click="$ctrl.close_modal()">
                     Отмена
                 </button>
-                <button type="submit" ng-click="$ctrl.accept_modal(addPersonForm)" id="form-accept" class="btn btn-success">
+                <button type="submit" ng-click="$ctrl.accept_modal(addPersonForm)" id="form-accept"
+                        class="btn btn-success">
                     {{ ($ctrl.id == 0)? "Создать":"Редактировать" }}
                 </button>
             </div>
@@ -91,18 +92,20 @@
                 Добавить нового пользователя
             </button>
         </div>
-        <div ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:search" class="card">
-            <label>Фамилия:</label>
-            <p>{{person.last_name}}</p>
-            <label>Имя:</label>
-            <p>{{person.first_name}}</p>
-            <label>Отчество:</label>
-            <p>{{person.father_name}}</p>
-            <label>Дата рождения:</label>
-            <p>{{ person.date }}</p>
-            <div class="buttons">
-                <button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
-                <button ng-click="$ctrl.click_remove(person.id)" class="btn btn-danger">Удалить</button>
+        <div id="persons-cards">
+            <div ng-repeat="person in $ctrl.persons | orderBy:$ctrl.orderProp | filter:search" class="card">
+                <label>Фамилия:</label>
+                <p>{{person.last_name}}</p>
+                <label>Имя:</label>
+                <p>{{person.first_name}}</p>
+                <label>Отчество:</label>
+                <p>{{person.father_name}}</p>
+                <label>Дата рождения:</label>
+                <p>{{ person.date }}</p>
+                <div class="buttons">
+                    <button ng-click="$ctrl.edit_user(person.id)" class="btn btn-warning">Редактировать</button>
+                    <button ng-click="$ctrl.click_remove(person.id)" class="btn btn-danger">Удалить</button>
+                </div>
             </div>
         </div>
     </div>

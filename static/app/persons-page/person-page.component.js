@@ -11,9 +11,28 @@ angular.module('farmNetApp').component('personsPage', {
             father_name: '#fathername-valid',
             date_text: '#date-valid',
         };
+        self.run_tour = function() {
+            // запускает тур на сайте
+            setTimeout(function () {
+                let intro = introJs();
+                console.log($('#persons-cards'));
+                intro.setOptions({
+                    steps: [
+                        {
+                            intro: "hello world"
+                        },
+                        {
+                            element: '#persons-list',
+                            intro: 'карточки с пользователями',
+                            position: 'right'
+                        }
+                    ]
+                });
+                intro.start();
+            }, 0);
+        };
         self.unixtime_to_date = function (unix_time) {
             // преобразует время в формате date в понятную строку с датой
-            console.log(unix_time);
             let date = new Date(unix_time);
             let day = date.getDate();
             day = day < 10 ? "0" + day : day;
@@ -35,10 +54,7 @@ angular.module('farmNetApp').component('personsPage', {
         };
         self.string2unixtime = function(str) {
             // преобразует строку с Русской датой в unixtime
-            console.log('string2unixtime');
-            console.log(str);
             let date = new Date(str.replace(/(\d+).(\d+).(\d+)/, '$3/$2/$1'));
-            console.log(date.getTime());
             return date.getTime();
         };
         self.clean_user_data(); // инициализируем форму пользователя
@@ -181,6 +197,9 @@ angular.module('farmNetApp').component('personsPage', {
         $('#date-button').click(function (event) {
             $('#date-input').datetimepicker('show');
         });
+
+        // запускаем тур
+        self.run_tour();
 
         // действия при закрытии модалки
         $('#add-person-form').on($.modal.CLOSE, function (event, modal) {

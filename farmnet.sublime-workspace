@@ -391,6 +391,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "static/css/app.animations.css",
+			"settings":
+			{
+				"buffer_size": 512,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "static/app/persons-page/person-page.template.html",
+			"settings":
+			{
+				"buffer_size": 5008,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -403,6 +421,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"view",
+				"Terminus: Open Default Shell in View"
+			],
 			[
 				"open",
 				"Terminus: Open Default Shell in View"
@@ -518,14 +540,16 @@
 	[
 		"/C/Users/WarKB/Desktop/FarmnetTestProject",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/img"
 	],
 	"file_history":
 	[
 		"/C/Users/WarKB/Desktop/План.txt",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/index.html",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/joyride-master/joyride-master/dist/foundation.joyride.js",
 		"/C/Users/WarKB/PycharmProjects/moba/runtime.txt",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/app.module.js",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/index.html",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css/persons-list.css",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.template.html",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.component.js",
@@ -648,8 +672,7 @@
 		"/C/Users/Redline/AppData/Local/Temp/scp06598/klimatplus64ru/Views/Home/Index.cshtml",
 		"/C/Users/Redline/AppData/Local/Temp/scp43598/home/www/drujite.ru/apps/drujite/urls.py",
 		"/D/Vladimir_SpaceApp/Documents/MySuperTrello/MySuperTrello/urls.py",
-		"/C/Users/Redline/AppData/Local/Temp/scp43846/home/www/drujite.ru/apps/drujite/views.py",
-		"/C/Users/Redline/Downloads/Telegram Desktop/CacheTree.cs"
+		"/C/Users/Redline/AppData/Local/Temp/scp43846/home/www/drujite.ru/apps/drujite/views.py"
 	],
 	"find":
 	{
@@ -820,8 +843,69 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "static/css/app.animations.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								109,
+								109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "static/app/persons-page/person-page.template.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5008,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 100.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -858,7 +942,7 @@
 	"menu_visible": true,
 	"output.Terminus":
 	{
-		"height": 276.0
+		"height": 201.0
 	},
 	"output.Terminus 2":
 	{
@@ -893,6 +977,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"template.ht",
+				"static\\app\\persons-page\\person-page.template.html"
+			],
+			[
+				"index.htm",
+				"static\\app\\index.html"
+			],
 			[
 				"",
 				"Администратор:  "
@@ -1033,7 +1125,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 283.0,
 	"status_bar_visible": true,
 	"template_settings":
