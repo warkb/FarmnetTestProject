@@ -46,7 +46,7 @@ angular.module('farmNetApp').component('personsPage', {
                         },
                         {
                             element: '#adduser-button',
-                            intro: 'Кликните сюда, чтобы добавить нового пользователя',
+                            intro: 'Чтобы создать нового пользователя, нажмите на эту кнопку',
                             position: 'bottom'
                         },
                         {

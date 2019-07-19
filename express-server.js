@@ -8,8 +8,11 @@ const app = express();
 const jsonParser = express.json();
 const sqlite3 = require('sqlite3').verbose();
 
-// нужен ли тур по сайту
-neet_toor = true;
+// флаг, нужен ли тур по сайту
+neet_tour = true;
+
+// тур нужен всегда
+tour_always = false;
 
 let db = new sqlite3.Database('./farmnet.db', (err) => {
 	if (err) {
@@ -46,7 +49,7 @@ app.get("/changeperson", function (request, response) {
 	let sql = '';
 	if (id == 0) {
 		sql = 'INSERT INTO Persons (first_name,last_name,father_name,date)' +
-		`VALUES ('${new_first_name}','${new_last_name}','${new_father_name}',${new_date});`
+		`VALUES ('${new_first_name}','${new_last_name}','${new_father_name}','${new_date}');`
 	}
 	else {
 		sql = 'update Persons set ' +
@@ -76,8 +79,8 @@ app.get('/delperson', function(request, response) {
 
 app.get('/needtour', function (request, response) {
     obj = {};
-    if (neet_toor) {
-        neet_toor = false;
+    if (neet_tour || tour_always) {
+        neet_tour = false;
         obj.need_tour = true;
     }
     else {

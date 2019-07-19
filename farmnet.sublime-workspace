@@ -404,7 +404,7 @@
 			"file": "static/app/persons-page/person-page.template.html",
 			"settings":
 			{
-				"buffer_size": 5008,
+				"buffer_size": 5177,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -545,6 +545,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/WarKB/Desktop/snakepit-game-master/snakepit-game-master/simple/game_loop_basic.py",
+		"/C/Users/WarKB/Desktop/projectf/index.html",
+		"/C/Users/WarKB/Desktop/Plants vs Zombies Русская Версия/bass.dll",
 		"/C/Users/WarKB/Desktop/План.txt",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/index.html",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/joyride-master/joyride-master/dist/foundation.joyride.js",
@@ -669,10 +672,7 @@
 		"/C/Users/Redline/AppData/Local/Temp/scp49355/hydrocom/Views/Home/Contacts.cshtml",
 		"/C/Users/Redline/AppData/Local/Temp/scp27525/home/www/drujite.ru/apps/drujite/settings.py",
 		"/C/Users/Redline/AppData/Local/Temp/scp50422/home/www/drujite.ru/apps/drujite/local_settings.py",
-		"/C/Users/Redline/AppData/Local/Temp/scp06598/klimatplus64ru/Views/Home/Index.cshtml",
-		"/C/Users/Redline/AppData/Local/Temp/scp43598/home/www/drujite.ru/apps/drujite/urls.py",
-		"/D/Vladimir_SpaceApp/Documents/MySuperTrello/MySuperTrello/urls.py",
-		"/C/Users/Redline/AppData/Local/Temp/scp43846/home/www/drujite.ru/apps/drujite/views.py"
+		"/C/Users/Redline/AppData/Local/Temp/scp06598/klimatplus64ru/Views/Home/Index.cshtml"
 	],
 	"find":
 	{
@@ -843,7 +843,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -873,7 +873,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -882,15 +882,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5008,
+						"buffer_size": 5177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1080,
+								1081
 							]
 						],
 						"settings":
@@ -900,10 +900,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 100.0,
+						"translation.y": 75.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
