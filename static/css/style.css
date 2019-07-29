@@ -1,0 +1,100 @@
+/* desktop */
+.desktop-icons{
+    font-size: 13px;
+    height: auto;
+    color: #fff;
+}
+.desktop-items{
+    background: transparent;
+    overflow-y: hidden !important;
+}
+.desktop-items .webix_list_item,
+.desktop-items .webix_list_item.webix_selected,
+.webix_drag_zone .webix_list_item{
+    padding: 10px 10px 1px 10px;
+    text-align: center;
+    line-height: 17px;
+    border:none;
+    box-shadow:none;
+}
+
+body {
+    /*картинка на рабочем столе*/
+    background-image: url("/static/img/background.jpg");
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/*стили для ярлычков*/
+.webix_drag_zone .webix_list_item.webix_selected .desktop-item-inner{
+    box-shadow:  none;
+    background: transparent;
+}
+.webix_drag_over .desktop-item-inner,
+.desktop-items .desktop-item-inner:hover,
+.webix_selected .desktop-item-inner{
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.5) inset;
+}
+.desktop-items .webix_list_item.webix_selected,
+.webix_drag_over.webix_list_item,
+.webix_drag_zone, .webix_drag_zone .webix_list_item.webix_selected{
+    background: transparent;
+}
+.desktop-item-inner{
+    padding: 5px 5px;
+    text-shadow: 1px 1px #000;
+}
+
+.desktop-items .webix_list_item, .desktop-items .webix_list_item.webix_selected, .webix_drag_zone .webix_list_item {
+    padding: 10px 10px 1px 10px;
+    text-align: center;
+    line-height: 17px;
+    border: none;
+    box-shadow: none;
+}
+
+/*для времени*/
+.time-template{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 13px;
+}
+.time-template .webix_template{
+    padding-top: 4px;
+}
+
+/*тулбар*/
+.toolbar-bottom{
+    background: url("/static/img/panel_bg.png") repeat !important;
+    margin-top: -40px;
+}
+
+.toolbar-bottom .webix_img_btn:hover{
+    background: url("/static/img/panel_bg.png") repeat !important;
+    border-radius: 0;
+}
+.toolbar-bottom .webix_img_btn:focus{
+    /*background:transparent !important;*/
+}
+.toolbar-bottom .webix_el_box{
+    padding: 0 !important;
+    height: 39px !important;
+}
+.toolbar-bottom .webix_el_button{
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    height: 40px !important;
+}
+.toolbar-bottom .webix_image{
+    height: 40px !important;
+    width: 41px !important;
+}
+
+.toolbar-bottom .toolbar-icon .webix_el_box{
+    border-bottom: 2px solid #b3d9ff;
+}

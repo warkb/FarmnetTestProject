@@ -1,97 +1,27 @@
 <!doctype html>
 <!DOCTYPE html>
-<html ng-app="farmNetApp">
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Farmnet Project</title>
-	<!-- стили -->
-    <link type="text/css" rel="stylesheet" href="static/app/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-reboot.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/login-card.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/app.animations.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/persons-list.css">
+    <!--webix-->
+	<link rel="stylesheet" href="/static/js/webix/codebase/webix.css" type="text/css">
+	<script src="/static/js/webix/codebase/webix.js" type="text/javascript"></script>
+    <!-- типы для webix -->
+    <reference path="/static/js/webix/codebase/types/webix.global.d.ts"/>
 
-    <!-- скрипты -->
-    <script type="text/javascript" src="static/js/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="/static/js/underscore.js"></script>
-    <script type="text/javascript" src="/static/js/sweetalert.min.js"></script>
+    <!--стили для приложения-->
+    <link rel="stylesheet" href="/static/css/style.css">
 
-    <!-- jQuery Modal -->
-	<link rel="stylesheet" href="../../static/js/jquery.modal/jquery.modal.min.css">
-    <script src="../../static/js/jquery.modal/jquery.modal.min.js"></script>
+    <!--скрипты приложения-->
+    <script src="/static/js/data.js"></script>
+    <script src="/static/js/main-script.js"></script>
 
-	<!--datetimepicker-->
-	<link rel="stylesheet" type="text/css" href="/static/js/datetimepicker/jquery.datetimepicker.min.css">
-	<script src="/static/js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
-
-    <!--Intro.js-->
-	<link rel="stylesheet" href="/static/js/intro.js-2.9.3/introjs.css">
-	<script src="/static/js/intro.js-2.9.3/intro.js"></script>
-
-    <!-- AngularJS -->
-    <script src="static/app/lib/angular/angular.js"></script>
-    <script src="static/app/lib/angular-route/angular-route.js"></script>
-    <script src="static/app/lib/angular-animate/angular-animate.js"></script>
-	<script src="static/app/app.module.js"></script>
-	<script src="static/app/app.config.js"></script>
-	<!-- подключаем компоненты -->
-	<script src="static/app/log-page/log-page.module.js"></script>
-	<script src="static/app/log-page/log-page.component.js"></script>
-	<script src="static/app/persons-page/person-page.module.js"></script>
-	<script src="static/app/persons-page/person-page.component.js"></script>
-	<style type="text/css">
-		.main-div {
-			background-image: url('/static/img/background.jpg');
-			background-size: cover;
-			color: white;
-			background-repeat: no-repeat;
-			width: 100vw;
-			height: 100vh;
-			position: fixed;
-			overflow-y: scroll;
-		}
-		#users-page {
-			padding-left: 10px;
-		}
-	</style>
 </head>
 <body>
-	<div class="main-div view-container">
-		<div ng-view class="view-frame">
-			
-		</div>
-	</div>
-	<style>
-		/*фикс проблемы с introjs*/
-		/*когда перекрывался элемент*/
-		.introjs-helperLayer {
-			background: transparent;
-		}
-
-		.introjs-overlay {
-			opacity: 0 !important;
-		}
-
-		.introjs-helperLayer:before {
-			opacity: 0;
-			content: '';
-			position: fixed;
-			width: inherit;
-			height: inherit;
-			border-radius: 0.5em;
-			box-shadow: 0 0 0 1000em rgba(0,0,0, .7);
-			opacity: 1;
-		}
-
-		.introjs-helperLayer:after {
-			content: '';
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			position: fixed;
-			z-index: 1000;
-		}
-	</style>
+    <!--инициализация приложения-->
+    <script>
+        app.init();
+    </script>
 </body>
 </html>

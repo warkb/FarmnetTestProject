@@ -50,8 +50,6 @@ angular.module('farmNetApp').component('personsPage', {
                             position: 'bottom'
                         },
                         {
-                            intro: 'Спасибо за внимание. Этот тур запускается только при первом просмотре после рестарта сервера'
-                        }
                     ]
                 });
                 intro.start();
