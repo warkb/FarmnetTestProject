@@ -392,39 +392,11 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/WarKB/web-desktop/index.html",
-			"settings":
-			{
-				"buffer_size": 1391,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/js/app.js",
-			"settings":
-			{
-				"buffer_size": 8982,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/C/Users/WarKB/web-desktop/js/data.js",
 			"settings":
 			{
 				"buffer_size": 10079,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 249 files for \"desktop-items\"\n\nC:\\Users\\WarKB\\web-desktop\\css\\styles.css:\n   19      color: #FFFFFF;\n   20  }\n   21: .desktop-items{\n   22      background: transparent;\n   23      overflow-y: hidden !important;\n   24  }\n   25: .desktop-items .webix_list_item,\n   26: .desktop-items .webix_list_item.webix_selected,\n   27  .webix_drag_zone .webix_list_item{\n   28  \tpadding: 10px 10px 1px 10px;\n   ..\n   43  }\n   44  .webix_drag_over .desktop-item-inner,\n   45: .desktop-items .desktop-item-inner:hover,\n   46  .webix_selected .desktop-item-inner{\n   47  \tbackground: rgba(255,255,255,0.3);\n   48  \tbox-shadow: 0 0 0 1px rgba(255,255,255,0.5) inset;\n   49  }\n   50: .desktop-items .webix_list_item.webix_selected,\n   51  .webix_drag_over.webix_list_item,\n   52  .webix_drag_zone, .webix_drag_zone .webix_list_item.webix_selected{\n\nC:\\Users\\WarKB\\web-desktop\\js\\app.js:\n   37  \t\t\t\t\t\t\tid: \"desktop\",\n   38  \t\t\t\t\t\t\twidth: 105,\n   39: \t\t\t\t\t\t\tcss:\"desktop-items\",\n   40  \n   41  \t\t\t\t\t\t\ttype: {\n\n6 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 1024,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
 			}
 		},
 		{
@@ -439,7 +411,34 @@
 			"file": "/C/Users/WarKB/web-desktop/js/wins.js",
 			"settings":
 			{
-				"buffer_size": 8481,
+				"buffer_size": 8546,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/WarKB/web-desktop/js/views/gantt.js",
+			"settings":
+			{
+				"buffer_size": 666,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/WarKB/web-desktop/index.html",
+			"settings":
+			{
+				"buffer_size": 1493,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/WarKB/web-desktop/js/app.js",
+			"settings":
+			{
+				"buffer_size": 8982,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -576,9 +575,18 @@
 	},
 	"expanded_folders":
 	[
+		"/C/Users/WarKB/web-desktop",
+		"/C/Users/WarKB/web-desktop/js",
+		"/C/Users/WarKB/web-desktop/js/views",
+		"/C/Users/WarKB/web-desktop/libs",
+		"/C/Users/WarKB/web-desktop/libs/gantt"
 	],
 	"file_history":
 	[
+		"/C/Users/WarKB/web-desktop/libs/gantt/dhtmlxgantt.js",
+		"/C/Users/WarKB/web-desktop/js/views/gantt.js",
+		"/C/Users/WarKB/web-desktop/js/app.js",
+		"/C/Users/WarKB/web-desktop/index.html",
 		"/C/Users/WarKB/Desktop/инет продлевал 2207.txt",
 		"/C/Users/WarKB/web-desktop/js/views/winmenu.js",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css/app.animations.css",
@@ -702,11 +710,7 @@
 		"/C/Users/Redline/Desktop/gunicorn.log",
 		"/C/Users/Redline/AppData/Local/Temp/scp55028/home/www/drujite.ru/apps/camps/admin.py",
 		"/C/Users/Redline/Downloads/search console.txt",
-		"/C/Users/Redline/Desktop/WorkProjects/csharpCourse.txt",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/Dal/Scripts/addCustomRoutesForItems.py",
-		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/Dal/Scripts/result.txt",
-		"/C/Users/Redline/AppData/Local/Temp/scp07235/DeliveryFM/basket.html",
-		"/C/Users/Redline/Desktop/oldmin.css"
+		"/C/Users/Redline/Desktop/WorkProjects/csharpCourse.txt"
 	],
 	"find":
 	{
@@ -733,6 +737,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gantt =",
+			"gantt=",
+			"gantt =",
+			"gantt=",
+			"gantt = ",
+			"gantt",
+			"config",
+			"getPosition",
+			"wins",
 			"toolbar-bottom",
 			"webix_transparent",
 			"desktop-items",
@@ -851,16 +864,7 @@
 			"[",
 			"]",
 			"print",
-			"# print",
-			"src",
-			"[",
-			"^VM",
-			"RemoteUrl",
-			"FullText",
-			"ShortText",
-			"Vendor",
-			"CategoryId",
-			"PhotoUrl"
+			"# print"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -878,68 +882,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/WarKB/web-desktop/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1391,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1037,
-								1037
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/WarKB/web-desktop/js/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8982,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								513,
-								523
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "/C/Users/WarKB/web-desktop/js/data.js",
 					"semi_transient": false,
 					"settings":
@@ -951,8 +898,8 @@
 						"selection":
 						[
 							[
-								778,
-								778
+								491,
+								504
 							]
 						],
 						"settings":
@@ -964,77 +911,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1024,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										128,
-										141
-									],
-									[
-										238,
-										251
-									],
-									[
-										278,
-										291
-									],
-									[
-										472,
-										485
-									],
-									[
-										676,
-										689
-									],
-									[
-										952,
-										965
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								135,
-								135
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "/C/Users/WarKB/web-desktop/css/styles.css",
 					"semi_transient": false,
 					"settings":
@@ -1058,24 +939,24 @@
 						"translation.y": 773.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "/C/Users/WarKB/web-desktop/js/wins.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8481,
+						"buffer_size": 8546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								296,
+								309
 							]
 						],
 						"settings":
@@ -1084,10 +965,97 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 3498.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/WarKB/web-desktop/js/views/gantt.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6,
+								13
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/WarKB/web-desktop/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								968,
+								968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/WarKB/web-desktop/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8982,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1625,
+								1625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 924.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
