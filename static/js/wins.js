@@ -128,6 +128,7 @@ if(window.desktopApp)
              * отрабатывает при клике на ярлык с приложением
              * отображает окно с приложением
              */
+            desktopApp.beforeWinShow(name);
             var winId = name+"_win";
             console.log(`Приложение ${name}`);
             // return;
@@ -153,10 +154,6 @@ if(window.desktopApp)
 
             }
             $$(winId).show();
-            if(name == "scheduler" && $$("scheduler").getScheduler())
-                $$("scheduler").getScheduler().updateView();
-            else if(name == "gantt" && window.gantt)
-                gantt.render();
             desktopApp.wins.setActiveStyle(winId);
         },
         ui:{
@@ -232,24 +229,20 @@ if(window.desktopApp)
                     ]
                 },
                 body: function(){
+                    console.log('bodyfunction');
                     return {
-                        view:"dhx-scheduler",
-                        id:"scheduler",
-                        date:new Date(2015,7,5),
+                        view:"crm",
+                        id:"crm",
                         mode:"month",
                         init:function(){
-                            this.getScheduler().config.xml_date="%Y-%m-%d %H:%i";
-                            this.getScheduler().config.first_hour = 6;
-                            this.getScheduler().config.multi_day = false;
                         },
                         ready:function(){
-                            this.getScheduler().parse(test_data_set_2015);
                         }
                     }
                 },
                 events:{
                     onBeforeShow: function(){
-                        desktopApp.beforeWinShow("scheduler");
+                        desktopApp.beforeWinShow("crm");
                     }
                 }
             },

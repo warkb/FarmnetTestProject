@@ -98,3 +98,34 @@ body {
 .toolbar-bottom .toolbar-icon .webix_el_box{
     border-bottom: 2px solid #b3d9ff;
 }
+
+/*стили для иконок в тулбаре*/
+.toolbar-icon{
+    margin-right: 3px;
+}
+.toolbar-bottom .toolbar-icon .webix_el_box{
+    border-bottom: 2px solid #b3d9ff;
+}
+.toolbar-icon.active .webix_el_box, .toolbar-icon:hover .webix_el_box{
+    background: url("../img/start_hover_bg.png") repeat !important;
+}
+.toolbar-icon button{
+    padding: 5px 7.5px 4px;
+    border: none;
+
+}
+
+.toolbar-icon img, .toolbar-icon button div{
+    width: 25px;
+    height: 25px;
+
+}
+.toolbar-icon button div, .toolbar-icon .app_icon{
+    margin-top: 1px;
+}
+.toolbar-icon button div{
+    line-height: 25px;
+}
+.toolbar-icon .app_icon{
+    margin-top: 2px;
+}

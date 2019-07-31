@@ -392,35 +392,11 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/WarKB/web-desktop/js/data.js",
+			"file": "/C/Users/WarKB/web-desktop/js/app.js",
 			"settings":
 			{
-				"buffer_size": 10079,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/css/styles.css",
-			"settings":
-			{
-				"buffer_size": 6893,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/js/wins.js",
-			"settings":
-			{
-				"buffer_size": 8546,
+				"buffer_size": 8982,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/js/views/gantt.js",
-			"settings":
-			{
-				"buffer_size": 666,
 				"line_ending": "Windows"
 			}
 		},
@@ -434,11 +410,31 @@
 			}
 		},
 		{
-			"file": "/C/Users/WarKB/web-desktop/js/app.js",
+			"contents": "if(window.desktopApp)\n\tdesktopApp.wins = {\n\t\tactive: null,\n\t\tsetActiveStyle: function(winId){\n\t\t\tif(desktopApp.wins.active)\n\t\t\t\twebix.html.removeCss($$(desktopApp.wins.active).$view,\"active_win\");\n\t\t\twebix.html.addCss($$(winId).$view,\"active_win\",true);\n\t\t\tdesktopApp.wins.active = winId;\n\t\t},\n\t\tforEachWindow: function(func){\n\t\t\tvar views = $$(\"toolbar\").getChildViews();\n\t\t\tfor(var i =1; i< views.length; i++){\n\t\t\t\tif(views[i].config.id.indexOf(\"_button\") != -1){\n\t\t\t\t\tvar id = views[i].config.id.replace(\"button\",\"win\");\n\t\t\t\t\tif($$(id))\n\t\t\t\t\t\tfunc.call(this,id);\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\thideAllWindows: function(){\n\t\t\tthis.forEachWindow(function(id){\n\t\t\t\tif($$(id).isVisible()){\n\t\t\t\t\t$$(id).hide();\n\t\t\t\t\twebix.html.removeCss($$(id.replace(\"_win\",\"_button\")).$view, \"active\");\n\t\t\t\t}\n\t\t\t});\n\t\t},\n\t\tgetVisibleWinCount: function(){\n\t\t\tvar count = 0;\n\t\t\tthis.forEachWindow(function(id){\n\t\t\t\tif($$(id).isVisible())\n\t\t\t\t\tcount++;\n\t\t\t});\n\t\t\treturn count;\n\t\t},\n\t\tgetPosition: function(state){\n\t\t\tstate.left = this.config.left;\n\t\t\tstate.top = this.config.top;\n\t\t\tif(state.height + 40 >= state.maxHeight){\n\t\t\t\tstate.height = state.maxHeight - 40;\n\t\t\t}\n\t\t\tif(this.config.fullscreen){\n\t\t\t\tif (!this.config.lastWindowPos)\n\t\t\t\t\tthis.config.lastWindowPos = { top: state.top, left: state.left };\n\t\t\t\tstate.top = state.left = 0;\n\t\t\t}\n\t\t\telse{\n\t\t\t\tif (this.config.lastWindowPos){\n\t\t\t\t\tvar last = this.config.lastWindowPos;\n\t\t\t\t\tdelete this.config.lastWindowPos;\n\t\t\t\t\tstate.top = last.top;\n\t\t\t\t\tstate.left = last.left;\n\t\t\t\t}\n\t\t\t\tif(state.left+state.width > state.maxWidth){\n\t\t\t\t\tstate.left -= state.left+state.width - state.maxWidth;\n\t\t\t\t}\n\t\t\t\tif(state.top+state.height +40 > state.maxHeight){\n\t\t\t\t\tstate.top -= state.top+state.height +40 - state.maxHeight;\n\t\t\t\t}\n\t\t\t}\n\n\t\t},\n\t\tshowEmptyApp: function(obj){\n\t\t\tvar winId = obj.id+\"_win\";\n\n\t\t\tif(!$$(winId)){\n\t\t\t\tvar c = desktopApp.wins.getVisibleWinCount();\n\n\t\t\t\twebix.ui({\n\t\t\t\t\tview:\"window\",\n\t\t\t\t\tid: winId,\n\t\t\t\t\tcss:\"popup-window-custom \"+obj.$css||\"\",\n\t\t\t\t\tposition: desktopApp.wins.getPosition,\n\t\t\t\t\tleft: document.documentElement.clientWidth/2 - 400 + 15*c,\n\t\t\t\t\ttop: document.documentElement.clientHeight/2 - 225 - 40 + 25*c,\n\t\t\t\t\tmove:true,\n\t\t\t\t\tresize: true,\n\t\t\t\t\ttoFront: true,\n\t\t\t\t\theight:450,\n\t\t\t\t\twidth:800,\n\t\t\t\t\thead: this.ui.toolbar(\n\t\t\t\t\t\tobj.value+ \" (Not implemented) \",\n\t\t\t\t\t\tfunction () {\n\t\t\t\t\t\t\t$$(winId).hide();\n\t\t\t\t\t\t\twebix.html.removeCss($$(obj.id+\"_button\").$view, \"active\");\n\t\t\t\t\t\t},function () {\n\t\t\t\t\t\t\t$$(winId).config.fullscreen = !$$(winId).config.fullscreen;\n\t\t\t\t\t\t\t$$(winId).resize();\n\t\t\t\t\t\t\t$$(winId).config.left = 0;\n\t\t\t\t\t\t\t$$(winId).config.top = 0;\n\t\t\t\t\t\t},function () {\n\t\t\t\t\t\t\t$$(\"toolbar\").removeView(obj.id+\"_button\");\n\t\t\t\t\t\t\t$$(winId).hide();\n\t\t\t\t\t\t\tdesktopApp.buttonCount--;\n\t\t\t\t\t\t}\n\t\t\t\t\t\t),\n\t\t\t\t\tbody:{\n\t\t\t\t\t\tcss: \"empty-app\",\n\t\t\t\t\t\ttemplate: function(obj){\n\t\t\t\t\t\t\tvar icon = \"\";\n\t\t\t\t\t\t\tif(obj.img){\n\t\t\t\t\t\t\t\ticon = \"<img src='\" + obj.img + \"' align='center'>\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\telse if(obj.icon){\n\t\t\t\t\t\t\t\ticon = \"<span class='webix_icon mdi mdi-\" + obj.icon + \"'></span>\";\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\treturn \"<div class='empty-app-inner' style='background-color:\" + obj.color + \";'>\" + icon + \"</div>\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\tdata: obj\n\t\t\t\t\t},\n\t\t\t\t\ton:{\n\t\t\t\t\t\tonBeforeShow: function(){\n\t\t\t\t\t\t\tdesktopApp.beforeWinShow(obj);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t})\n\t\t\t}\n\t\t$$(winId).show();\n\t\t$$(\"winmenu\").hide();\n\t\tdesktopApp.wins.setActiveStyle(winId);\n\t},\n\tshowApp: function(name){\n\t\t\t/*\n\t\t\t * отрабатывает при клике на ярлык с приложением\n\t\t\t */\n\t\t\t var winId = name+\"_win\";\n\t\t\t var c = desktopApp.wins.getVisibleWinCount();\n\t\t\t if(!$$(winId)){\n\t\t\t \tvar config = desktopApp.wins.ui[name];\n\t\t\t \twebix.ui({\n\t\t\t \t\tview:\"window\",\n\t\t\t \t\tid: winId,\n\t\t\t \t\tcss:\"popup-window-custom app \"+config.css||\"\",\n\t\t\t \t\tposition: desktopApp.wins.getPosition,\n\t\t\t \t\tresize: true,\n\t\t\t \t\tleft: document.documentElement.clientWidth/2 - 400 + 15*c,\n\t\t\t \t\ttop: document.documentElement.clientHeight/2 - 225 - 40 + 25*c,\n\t\t\t \t\tmove:true,\n\t\t\t \t\ttoFront: true,\n\t\t\t \t\theight:450,\n\t\t\t \t\twidth:800,\n\t\t\t \t\thead:  desktopApp.wins.ui.toolbar.apply(this,config.toolbar()),\n\t\t\t \t\tbody: config.body(),\n\t\t\t \t\ton: config.events\n\t\t\t \t});\n\n\t\t\t }\n\t\t\t $$(winId).show();\n\t\t\t if(name == \"scheduler\" && $$(\"scheduler\").getScheduler())\n\t\t\t \t$$(\"scheduler\").getScheduler().updateView();\n\t\t\t else if(name == \"gantt\" && window.gantt)\n\t\t\t \tgantt.render();\n\t\t\t desktopApp.wins.setActiveStyle(winId);\n\t\t\t},\n\t\t\tui:{\n\t\t\t\ttoolbar: function(title, onHide, onMinMax, onClose ){\n\t\t\t\t\treturn {\n\t\t\t\t\t\tview:\"toolbar\",\n\t\t\t\t\t\theight:28,\n\t\t\t\t\t\tcss:\"window-toolbar\",\n\t\t\t\t\t\tmargin:0,\n\t\t\t\t\t\tpadding:0,\n\t\t\t\t\t\tcols:[\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tview:\"label\",\n\t\t\t\t\t\t\tlabel: \"<img src='img/window-icon.png' class='header-window-icon'/> \"+title\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tview: \"button\",\n\t\t\t\t\t\t\ttype: \"image\",\n\t\t\t\t\t\t\timage: \"img/hide_button.png\",\n\t\t\t\t\t\t\twidth:36,\n\t\t\t\t\t\t\theight:20,\n\t\t\t\t\t\t\tcss:\"hide-button webix_transparent\",\n\t\t\t\t\t\t\ton:{\n\t\t\t\t\t\t\t\tonItemClick: onHide\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tview: \"button\",\n\t\t\t\t\t\t\ttype: \"image\",\n\t\t\t\t\t\t\timage: \"img/resize_button.png\",\n\t\t\t\t\t\t\twidth:36,\n\t\t\t\t\t\t\theight:20,\n\t\t\t\t\t\t\tcss:\"resize-button webix_transparent\",\n\t\t\t\t\t\t\ton: {\n\t\t\t\t\t\t\t\tonItemClick: onMinMax\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tview: \"button\",\n\t\t\t\t\t\t\ttype: \"image\",\n\t\t\t\t\t\t\timage: \"img/close_button.png\",\n\t\t\t\t\t\t\twidth:36,\n\t\t\t\t\t\t\theight:20,\n\t\t\t\t\t\t\tcss:\"close-button webix_transparent\",\n\t\t\t\t\t\t\ton: {\n\t\t\t\t\t\t\t\tonItemClick: onClose\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t};\n\t\t\t\t},\n\t\t\t\tscheduler:{\n\t\t\t\t\tcss: \"no_border\",\n\t\t\t\t\ttoolbar: function(){\n\t\t\t\t\t\treturn [\n\t\t\t\t\t\t\"DHTMlX Scheduler\",\n\t\t\t\t\t\tfunction () {\n\t\t\t\t\t\t\t$$('scheduler_win').hide();\n\t\t\t\t\t\t\twebix.html.removeCss($$(\"scheduler_button\").$view, \"active\");\n\t\t\t\t\t\t},function () {\n\t\t\t\t\t\t\t$$(\"scheduler_win\").config.fullscreen = !$$(\"scheduler_win\").config.fullscreen;\n\t\t\t\t\t\t\t$$(\"scheduler_win\").resize();\n\n\t\t\t\t\t\t\t$$(\"scheduler\").config.fullscreen = !$$(\"scheduler\").config.fullscreen;\n\t\t\t\t\t\t\t$$(\"scheduler\").resize();\n\t\t\t\t\t\t\t$$(\"scheduler\").getScheduler().updateView();\n\t\t\t\t\t\t},function () {\n\t\t\t\t\t\t\t$$(\"toolbar\").removeView(\"scheduler_button\");\n\t\t\t\t\t\t\t$$('scheduler_win').hide();\n\t\t\t\t\t\t\tdesktopApp.buttonCount--;\n\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\tbody: function(){\n\t\t\t\t\t\treturn {\n\t\t\t\t\t\t\tview:\"dhx-scheduler\",\n\t\t\t\t\t\t\tid:\"scheduler\",\n\t\t\t\t\t\t\tdate:new Date(2015,7,5),\n\t\t\t\t\t\t\tmode:\"month\",\n\t\t\t\t\t\t\tinit:function(){\n\t\t\t\t\t\t\t\tthis.getScheduler().config.xml_date=\"%Y-%m-%d %H:%i\";\n\t\t\t\t\t\t\t\tthis.getScheduler().config.first_hour = 6;\n\t\t\t\t\t\t\t\tthis.getScheduler().config.multi_day = false;\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\tready:function(){\n\t\t\t\t\t\t\t\tthis.getScheduler().parse(test_data_set_2015);\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\tevents:{\n\t\t\t\t\t\tonBeforeShow: function(){\n\t\t\t\t\t\t\tdesktopApp.beforeWinShow(\"scheduler\");\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\tgantt:{\n\t\t\t\t\ttoolbar: function(){\n\t\t\t\t\t\treturn [\n\t\t\t\t\t\t\"DHTMlX Gantt\",\n\t\t\t\t\t\tfunction () {\n\t\t\t\t\t\t\t$$('gantt_win').hide();\n\t\t\t\t\t\t\twebix.html.removeCss($$(\"gantt_button\").$view, \"active\");\n\t\t\t\t\t\t},\n\t\t\t\t\t\tfunction () {\n\t\t\t\t\t\t\t$$(\"gantt_win\").config.fullscreen = !$$(\"gantt_win\").config.fullscreen;\n\t\t\t\t\t\t\t$$(\"gantt_win\").resize();\n\n\t\t\t\t\t\t\t$$(\"gantt\").config.fullscreen = !$$(\"scheduler\").config.fullscreen;\n\t\t\t\t\t\t\t$$(\"gantt\").resize();\n\t\t\t\t\t\t\tgantt.render();\n\t\t\t\t\t\t},function () {\n\t\t\t\t\t\t\t$$(\"toolbar\").removeView(\"gantt_button\");\n\t\t\t\t\t\t\t$$('gantt_win').hide();\n\t\t\t\t\t\t\tdesktopApp.buttonCount--;\n\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\tbody: function(){\n\t\t\t\t\t\treturn {\n\t\t\t\t\t\t\tview:\"dhx-gantt\",\n\t\t\t\t\t\t\tid:\"gantt\",\n\t\t\t\t\t\t\tinit:function(){\n\t\t\t\t\t\t\t//do nothing\n\t\t\t\t\t\t},\n\t\t\t\t\t\tready:function(){\n\t\t\t\t\t\t\tgantt.parse(tasks);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\tevents:{\n\t\t\t\t\tonBeforeShow: function(){\n\t\t\t\t\t\tdesktopApp.beforeWinShow(\"gantt\");\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\tfilemanager:{\n\t\t\t\tcss: \"no_border \",\n\t\t\t\ttoolbar: function(){\n\t\t\t\t\treturn [\n\t\t\t\t\t\"Filemanager\",\n\t\t\t\t\tfunction () {\n\t\t\t\t\t\t$$('filemanager_win').hide();\n\t\t\t\t\t\twebix.html.removeCss($$(\"filemanager_button\").$view, \"active\");\n\t\t\t\t\t},\n\t\t\t\t\tfunction () {\n\t\t\t\t\t\t$$(\"filemanager_win\").config.fullscreen = !$$(\"filemanager_win\").config.fullscreen;\n\t\t\t\t\t\t$$(\"filemanager_win\").resize();\n\n\t\t\t\t\t},function () {\n\t\t\t\t\t\t$$(\"toolbar\").removeView(\"filemanager_button\");\n\t\t\t\t\t\t$$('filemanager_win').hide();\n\t\t\t\t\t\tdesktopApp.buttonCount--;\n\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\tbody: function(){\n\t\t\t\t\treturn {\n\t\t\t\t\t\tview:\"filemanager\",\n\t\t\t\t\t\tid:\"filemanager\",\n\t\t\t\t\t\tdisabledHistory: true,\n\t\t\t\t\t\tdata: filemanagerData\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\tevents:{\n\t\t\t\t\tonBeforeShow: function() {\n\t\t\t\t\t\tdesktopApp.beforeWinShow(\"filemanager\");\n\t\t\t\t\t},\n\t\t\t\t\tonShow: function(){\n\n\t\t\t\t\t\tif(!$$(\"filemanager\").$$(\"tree\").getSelectedId())\n\t\t\t\t\t\t\t$$(\"filemanager\").$$(\"tree\").select($$(\"filemanager\").getFirstChildId(0));\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t};\n\n\n",
+			"file": "/C/Users/WarKB/web-desktop/js/wins.js",
+			"file_size": 8915,
+			"file_write_time": 132088610188636946,
 			"settings":
 			{
-				"buffer_size": 8982,
+				"buffer_size": 8607,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "    /*\n     * В этот скрипт инкапсулирована вся логика\n     * работы с окнами\n     */\n    if(window.desktopApp)\n        desktopApp.wins = {\n            active: null,\n            setActiveStyle: function(winId){\n                if(desktopApp.wins.active)\n                    webix.html.removeCss($$(desktopApp.wins.active).$view,\"active_win\");\n                webix.html.addCss($$(winId).$view,\"active_win\",true);\n                desktopApp.wins.active = winId;\n            },\n            forEachWindow: function(func){\n                var views = $$(\"toolbar\").getChildViews();\n                for(var i =1; i< views.length; i++){\n                    if(views[i].config.id.indexOf(\"_button\") != -1){\n                        var id = views[i].config.id.replace(\"button\",\"win\");\n                        if($$(id))\n                            func.call(this,id);\n                    }\n                }\n            },\n            hideAllWindows: function(){\n                this.forEachWindow(function(id){\n                    if($$(id).isVisible()){\n                        $$(id).hide();\n                        webix.html.removeCss($$(id.replace(\"_win\",\"_button\")).$view, \"active\");\n                    }\n                });\n            },\n            getVisibleWinCount: function(){\n                var count = 0;\n                this.forEachWindow(function(id){\n                    if($$(id).isVisible())\n                        count++;\n                });\n                return count;\n            },\n            getPosition: function(state){\n                state.left = this.config.left;\n                state.top = this.config.top;\n                if(state.height + 40 >= state.maxHeight){\n                    state.height = state.maxHeight - 40;\n                }\n                if(this.config.fullscreen){\n                    if (!this.config.lastWindowPos)\n                        this.config.lastWindowPos = { top: state.top, left: state.left };\n                    state.top = state.left = 0;\n                }\n                else{\n                    if (this.config.lastWindowPos){\n                        var last = this.config.lastWindowPos;\n                        delete this.config.lastWindowPos;\n                        state.top = last.top;\n                        state.left = last.left;\n                    }\n                    if(state.left+state.width > state.maxWidth){\n                        state.left -= state.left+state.width - state.maxWidth;\n                    }\n                    if(state.top+state.height +40 > state.maxHeight){\n                        state.top -= state.top+state.height +40 - state.maxHeight;\n                    }\n                }\n\n            },\n            showEmptyApp: function(obj){\n                var winId = obj.id+\"_win\";\n\n                if(!$$(winId)){\n                    var c = desktopApp.wins.getVisibleWinCount();\n\n                    webix.ui({\n                        view:\"window\",\n                        id: winId,\n                        css:\"popup-window-custom \"+obj.$css||\"\",\n                        position: desktopApp.wins.getPosition,\n                        left: document.documentElement.clientWidth/2 - 400 + 15*c,\n                        top: document.documentElement.clientHeight/2 - 225 - 40 + 25*c,\n                        move:true,\n                        resize: true,\n                        toFront: true,\n                        height:450,\n                        width:800,\n                        head: this.ui.toolbar(\n                            obj.value+ \" (Not implemented) \",\n                            function () {\n                                $$(winId).hide();\n                                webix.html.removeCss($$(obj.id+\"_button\").$view, \"active\");\n                            },function () {\n                                $$(winId).config.fullscreen = !$$(winId).config.fullscreen;\n                                $$(winId).resize();\n                                $$(winId).config.left = 0;\n                                $$(winId).config.top = 0;\n                            },function () {\n                                $$(\"toolbar\").removeView(obj.id+\"_button\");\n                                $$(winId).hide();\n                                desktopApp.buttonCount--;\n                            }\n                        ),\n                        body:{\n                            css: \"empty-app\",\n                            template: function(obj){\n                                var icon = \"\";\n                                if(obj.img){\n                                    icon = \"<img src='\" + obj.img + \"' align='center'>\";\n                                }\n                                else if(obj.icon){\n                                    icon = \"<span class='webix_icon mdi mdi-\" + obj.icon + \"'></span>\";\n                                }\n                                return \"<div class='empty-app-inner' style='background-color:\" + obj.color + \";'>\" + icon + \"</div>\"\n                            },\n                            data: obj\n                        },\n                        on:{\n                            onBeforeShow: function(){\n                                desktopApp.beforeWinShow(obj);\n                            }\n                        }\n                    })\n                }\n                $$(winId).show();\n                $$(\"winmenu\").hide();\n                desktopApp.wins.setActiveStyle(winId);\n            },\n            showApp: function(name){\n                /*\n                 * отрабатывает при клике на ярлык с приложением\n                 * отображает окно с приложением\n                 */\n                var winId = name+\"_win\";\n                console.log(`Приложение ${name}`);\n                // return;\n                var c = desktopApp.wins.getVisibleWinCount();\n                if(!$$(winId)){\n                    var config = desktopApp.wins.ui[name];\n                    webix.ui({\n                        view:\"window\",\n                        id: winId,\n                        //css:\"popup-window-custom app \"/+config.css||\"\",\n                        position: desktopApp.wins.getPosition,\n                        resize: true,\n                        left: document.documentElement.clientWidth/2 - 400 + 15*c,\n                        top: document.documentElement.clientHeight/2 - 225 - 40 + 25*c,\n                        move:true,\n                        toFront: true,\n                        height:450,\n                        width:800,\n                        head:  desktopApp.wins.ui.toolbar.apply(this,config.toolbar()),\n                        //body: config.body(),\n                        //on: config.events\n                    });\n\n                }\n                $$(winId).show();\n                if(name == \"scheduler\" && $$(\"scheduler\").getScheduler())\n                    $$(\"scheduler\").getScheduler().updateView();\n                else if(name == \"gantt\" && window.gantt)\n                    gantt.render();\n                desktopApp.wins.setActiveStyle(winId);\n            },\n            ui:{\n                toolbar: function(title, onHide, onMinMax, onClose ){\n                    return {\n                        view:\"toolbar\",\n                        height:28,\n                        css:\"window-toolbar\",\n                        margin:0,\n                        padding:0,\n                        cols:[\n                            {\n                                view:\"label\",\n                                label: \"<img src='/static/img/window-icon.png' class='header-window-icon'/> \"+title\n                            },\n                            {\n                                view: \"button\",\n                                type: \"image\",\n                                image: \"/static/img/hide_button.png\",\n                                width:36,\n                                height:20,\n                                css:\"hide-button webix_transparent\",\n                                on:{\n                                    onItemClick: onHide\n                                }\n                            },\n                            {\n                                view: \"button\",\n                                type: \"image\",\n                                image: \"/static/img/resize_button.png\",\n                                width:36,\n                                height:20,\n                                css:\"resize-button webix_transparent\",\n                                on: {\n                                    onItemClick: onMinMax\n                                }\n                            },\n                            {\n                                view: \"button\",\n                                type: \"image\",\n                                image: \"/static/img/close_button.png\",\n                                width:36,\n                                height:20,\n                                css:\"close-button webix_transparent\",\n                                on: {\n                                    onItemClick: onClose\n                                }\n                            }\n                        ]\n                    };\n                },\n                crm:{\n                    /* описываются элементы интерфейса для crm-системы */\n                    css: \"no_border\",\n                    toolbar: function(){\n                        return [\n                            \"CRM - система\", // заголовок окна\n                            function () { // функция сворачивания окна\n                                $$('crm_win').hide();\n                                webix.html.removeCss($$(\"crm_button\").$view, \"active\");\n                            },function () { // функция разворачивания окна\n                                $$(\"crm_win\").config.fullscreen = !$$(\"crm_win\").config.fullscreen;\n                                $$(\"crm_win\").resize();\n\n                                $$(\"crm\").config.fullscreen = !$$(\"crm\").config.fullscreen;\n                                $$(\"crm\").resize();\n                                $$(\"scheduler\").getScheduler().updateView();\n                            },function () { // функция закрытия окна\n                                $$(\"toolbar\").removeView(\"crm_button\");\n                                $$('crm_win').hide();\n                                desktopApp.buttonCount--;\n                            }\n                        ]\n                    },\n                    body: function(){\n                        return {\n                            view:\"dhx-scheduler\",\n                            id:\"scheduler\",\n                            date:new Date(2015,7,5),\n                            mode:\"month\",\n                            init:function(){\n                                this.getScheduler().config.xml_date=\"%Y-%m-%d %H:%i\";\n                                this.getScheduler().config.first_hour = 6;\n                                this.getScheduler().config.multi_day = false;\n                            },\n                            ready:function(){\n                                this.getScheduler().parse(test_data_set_2015);\n                            }\n                        }\n                    },\n                    events:{\n                        onBeforeShow: function(){\n                            desktopApp.beforeWinShow(\"scheduler\");\n                        }\n                    }\n                },\n            }\n        };\n\n\n",
+			"settings":
+			{
+				"buffer_size": 11574,
+				"line_ending": "Windows",
+				"name": "/*"
+			}
+		},
+		{
+			"file": "/C/Users/WarKB/web-desktop/js/views/scheduler.js",
+			"settings":
+			{
+				"buffer_size": 2065,
 				"line_ending": "Windows"
 			}
 		}
@@ -576,13 +572,16 @@
 	"expanded_folders":
 	[
 		"/C/Users/WarKB/web-desktop",
+		"/C/Users/WarKB/web-desktop/img",
 		"/C/Users/WarKB/web-desktop/js",
-		"/C/Users/WarKB/web-desktop/js/views",
 		"/C/Users/WarKB/web-desktop/libs",
-		"/C/Users/WarKB/web-desktop/libs/gantt"
+		"/C/Users/WarKB/web-desktop/libs/scheduler"
 	],
 	"file_history":
 	[
+		"/C/Users/WarKB/web-desktop/libs/scheduler/dhtmlxscheduler.js",
+		"/C/Users/WarKB/web-desktop/css/styles.css",
+		"/C/Users/WarKB/web-desktop/js/data.js",
 		"/C/Users/WarKB/web-desktop/libs/gantt/dhtmlxgantt.js",
 		"/C/Users/WarKB/web-desktop/js/views/gantt.js",
 		"/C/Users/WarKB/web-desktop/js/app.js",
@@ -707,10 +706,7 @@
 		"/C/Users/Redline/AppData/Local/Temp/scp51524/etc/init/nginx.conf",
 		"/C/Users/Redline/AppData/Local/Temp/scp30014/home/www/drujite.ru/deploy/redis.conf",
 		"/C/Users/Redline/AppData/Local/Temp/scp27186/home/www/drujite.ru/wsgi.py",
-		"/C/Users/Redline/Desktop/gunicorn.log",
-		"/C/Users/Redline/AppData/Local/Temp/scp55028/home/www/drujite.ru/apps/camps/admin.py",
-		"/C/Users/Redline/Downloads/search console.txt",
-		"/C/Users/Redline/Desktop/WorkProjects/csharpCourse.txt"
+		"/C/Users/Redline/Desktop/gunicorn.log"
 	],
 	"find":
 	{
@@ -737,6 +733,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"showEmptyApp",
+			"scheduler_button",
+			"_button",
+			"img/",
+			"scheduler",
+			"scheduler_button",
+			"config.css",
 			"gantt =",
 			"gantt=",
 			"gantt =",
@@ -857,14 +860,7 @@
 			"http://www.patriarchia.ru/images/patr_banner_88_2.gif",
 			"',",
 			"dictionary",
-			"tool",
-			"tools",
-			"}",
-			"{",
-			"[",
-			"]",
-			"print",
-			"# print"
+			"tool"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -882,24 +878,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/WarKB/web-desktop/js/data.js",
+					"file": "/C/Users/WarKB/web-desktop/js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10079,
+						"buffer_size": 8982,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								491,
-								504
+								3300,
+								3300
 							]
 						],
 						"settings":
@@ -908,101 +904,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/WarKB/web-desktop/css/styles.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1348,
-								775
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 773.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/WarKB/web-desktop/js/wins.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8546,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								296,
-								309
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3498.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/WarKB/web-desktop/js/views/gantt.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6,
-								13
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1573.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "/C/Users/WarKB/web-desktop/index.html",
 					"semi_transient": false,
 					"settings":
@@ -1026,24 +935,24 @@
 						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/Users/WarKB/web-desktop/js/app.js",
+					"buffer": 2,
+					"file": "/C/Users/WarKB/web-desktop/js/wins.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8982,
+						"buffer_size": 8607,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1625,
-								1625
+								1754,
+								1766
 							]
 						],
 						"settings":
@@ -1052,10 +961,70 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 924.0,
+						"translation.y": 1199.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9883,
+								9883
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/*",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4782.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/WarKB/web-desktop/js/views/scheduler.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1187,
+								1187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
