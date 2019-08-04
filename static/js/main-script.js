@@ -1,9 +1,9 @@
 /*
  * В этом файле находятся скрипты
- * ответственные за создание рабочего стола
+ * ответственные за создание
  */
 
-desktopApp = {
+app = {
     init: function() {
         this.createLayout();
         this.createToolbar()
@@ -33,11 +33,10 @@ desktopApp = {
                             },
                             select: "multiselect",
                             drag: true,
-                            // используем список со значками для инициализации всех значков
                             data: webix.copy(desktop_icons),
                             on: {
                                 // действие по клику на ярлыке
-                                onItemDblClick: desktopApp.wins.showApp //desktopApp.wins.showApp
+                                onItemDblClick: ()=>{} //desktopApp.wins.showApp
                             }
                         },
                         {}
@@ -61,6 +60,15 @@ desktopApp = {
                     type: "image",
                     image: "/static/img/start.png",
                     width: 72,
+                    // on: {
+                    //     onItemClick: function () {
+                    //         if ($$("winmenu").config.hidden === false){
+                    //             $$("winmenu").hide();
+                    //         }else{
+                    //             $$("winmenu").show();
+                    //         }
+                    //     }
+                    // }
                 },
                 {},
                 { view:"template", id:"time", width:95, css:"time-template" }
