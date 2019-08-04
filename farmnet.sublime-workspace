@@ -392,54 +392,20 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/WarKB/web-desktop/index.html",
+			"file": "static/css/app.animations.css",
 			"settings":
 			{
-				"buffer_size": 1391,
+				"buffer_size": 512,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/WarKB/web-desktop/js/app.js",
+			"file": "static/app/persons-page/person-page.template.html",
 			"settings":
 			{
-				"buffer_size": 8982,
+				"buffer_size": 5177,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/js/data.js",
-			"settings":
-			{
-				"buffer_size": 10079,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 249 files for \"desktop-items\"\n\nC:\\Users\\WarKB\\web-desktop\\css\\styles.css:\n   19      color: #FFFFFF;\n   20  }\n   21: .desktop-items{\n   22      background: transparent;\n   23      overflow-y: hidden !important;\n   24  }\n   25: .desktop-items .webix_list_item,\n   26: .desktop-items .webix_list_item.webix_selected,\n   27  .webix_drag_zone .webix_list_item{\n   28  \tpadding: 10px 10px 1px 10px;\n   ..\n   43  }\n   44  .webix_drag_over .desktop-item-inner,\n   45: .desktop-items .desktop-item-inner:hover,\n   46  .webix_selected .desktop-item-inner{\n   47  \tbackground: rgba(255,255,255,0.3);\n   48  \tbox-shadow: 0 0 0 1px rgba(255,255,255,0.5) inset;\n   49  }\n   50: .desktop-items .webix_list_item.webix_selected,\n   51  .webix_drag_over.webix_list_item,\n   52  .webix_drag_zone, .webix_drag_zone .webix_list_item.webix_selected{\n\nC:\\Users\\WarKB\\web-desktop\\js\\app.js:\n   37  \t\t\t\t\t\t\tid: \"desktop\",\n   38  \t\t\t\t\t\t\twidth: 105,\n   39: \t\t\t\t\t\t\tcss:\"desktop-items\",\n   40  \n   41  \t\t\t\t\t\t\ttype: {\n\n6 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 1024,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/css/styles.css",
-			"settings":
-			{
-				"buffer_size": 6893,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/WarKB/web-desktop/js/wins.js",
-			"settings":
-			{
-				"buffer_size": 8481,
 				"line_ending": "Windows"
 			}
 		}
@@ -455,10 +421,6 @@
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"open view",
-				"Terminus: Open Default Shell in View"
-			],
 			[
 				"view",
 				"Terminus: Open Default Shell in View"
@@ -576,23 +538,13 @@
 	},
 	"expanded_folders":
 	[
+		"/C/Users/WarKB/Desktop/FarmnetTestProject",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/img"
 	],
 	"file_history":
 	[
-		"/C/Users/WarKB/Desktop/инет продлевал 2207.txt",
-		"/C/Users/WarKB/web-desktop/js/views/winmenu.js",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css/app.animations.css",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.template.html",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/express-server.js",
-		"/C/Users/WarKB/Desktop/snakepit-game-master/snakepit-game-master/server.py",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.component.js",
-		"/C/Users/WarKB/Documents/My Games/Fallout3/RendererInfo.txt",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/js/webix.trial.complete/kanban/samples/index.html",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/js/webix.trial.complete/hello.html",
-		"/C/Users/WarKB/Documents/My Games/Fallout3/FALLOUT.INI",
-		"/F/readme.txt",
-		"/E/my project/[project} — копия (10).html",
-		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/log-page/log-page.template.html",
 		"/C/Users/WarKB/Desktop/snakepit-game-master/snakepit-game-master/simple/game_loop_basic.py",
 		"/C/Users/WarKB/Desktop/projectf/index.html",
 		"/C/Users/WarKB/Desktop/Plants vs Zombies Русская Версия/bass.dll",
@@ -602,6 +554,8 @@
 		"/C/Users/WarKB/PycharmProjects/moba/runtime.txt",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/app.module.js",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/css/persons-list.css",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.template.html",
+		"/C/Users/WarKB/Desktop/FarmnetTestProject/static/app/persons-page/person-page.component.js",
 		"/C/Users/WarKB/Desktop/FarmnetTestProject/todo.todo",
 		"/C/Users/WarKB/Downloads/JetBrains WebStorm 2018.1.4/JetBrains.WebStorm.2018.1.4.Incl.KeyMaker.14TH.BIRTHDAY-DVT/install.txt",
 		"/C/Users/Wladimir/Desktop/Сакральные знания/Хоткеи.txt",
@@ -706,18 +660,29 @@
 		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/Dal/Scripts/addCustomRoutesForItems.py",
 		"/D/Vladimir_SpaceApp/Documents/Projects/DeliveryFM/Dal/Scripts/result.txt",
 		"/C/Users/Redline/AppData/Local/Temp/scp07235/DeliveryFM/basket.html",
-		"/C/Users/Redline/Desktop/oldmin.css"
+		"/C/Users/Redline/Desktop/oldmin.css",
+		"/C/Users/Redline/testGulp/gulpfile.js",
+		"/C/Users/Redline/AppData/Local/Temp/scp16691/home/nordic/nordic/myvenv/lib/python3.5/site-packages/robots/views.py",
+		"/C/Users/Redline/Desktop/obshivka-furgonov_last/nordicsite/nordicsite/settings.py",
+		"/D/Vladimir_SpaceApp/Documents/Projects/nordic_prod/nordic/kurbatovWindowsEnv/Lib/site-packages/robots/__init__.py",
+		"/C/Users/Redline/AppData/Local/Temp/scp17688/home/nordic/nordic/myvenv/lib/python3.5/site-packages/robots/__init__.py",
+		"/D/Vladimir_SpaceApp/Documents/Projects/nordic_prod/nordic/requirements060519.txt",
+		"/C/Users/Redline/Desktop/WorkProjects/tmp.html",
+		"/C/Users/Redline/AppData/Local/Temp/scp18102/home/nordic/nordic/myvenv/lib/python3.5/site-packages/django/__init__.py",
+		"/C/Users/Redline/AppData/Local/Temp/scp49355/hydrocom/Views/Home/Contacts.cshtml",
+		"/C/Users/Redline/AppData/Local/Temp/scp27525/home/www/drujite.ru/apps/drujite/settings.py",
+		"/C/Users/Redline/AppData/Local/Temp/scp50422/home/www/drujite.ru/apps/drujite/local_settings.py",
+		"/C/Users/Redline/AppData/Local/Temp/scp06598/klimatplus64ru/Views/Home/Index.cshtml"
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
 		"height": 128.0,
 		"where_history":
 		[
-			"C:\\Users\\WarKB\\web-desktop,,-.git",
 			"C:\\Users\\Redline\\Desktop\\tmp\\windowsProject\\",
 			"D:\\largeTMP\\nordic_working\\nordicsite",
 			"D:\\largeTMP\\nordic",
@@ -733,10 +698,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"toolbar-bottom",
-			"webix_transparent",
-			"desktop-items",
-			"<link",
 			"<input",
 			"input type=\"text\"",
 			"query",
@@ -860,7 +821,11 @@
 			"ShortText",
 			"Vendor",
 			"CategoryId",
-			"PhotoUrl"
+			"PhotoUrl",
+			"Title",
+			"[",
+			"/",
+			"href"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -878,216 +843,67 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/WarKB/web-desktop/index.html",
+					"file": "static/css/app.animations.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1391,
+						"buffer_size": 512,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1037,
-								1037
+								109,
+								109
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/WarKB/web-desktop/js/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8982,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								513,
-								523
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/C/Users/WarKB/web-desktop/js/data.js",
+					"buffer": 1,
+					"file": "static/app/persons-page/person-page.template.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10079,
+						"buffer_size": 5177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								778,
-								778
+								1080,
+								1081
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1024,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										128,
-										141
-									],
-									[
-										238,
-										251
-									],
-									[
-										278,
-										291
-									],
-									[
-										472,
-										485
-									],
-									[
-										676,
-										689
-									],
-									[
-										952,
-										965
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								135,
-								135
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/WarKB/web-desktop/css/styles.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1348,
-								775
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 773.0,
+						"translation.y": 75.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Users/WarKB/web-desktop/js/wins.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1095,7 +911,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 31.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1126,7 +942,7 @@
 	"menu_visible": true,
 	"output.Terminus":
 	{
-		"height": 212.0
+		"height": 201.0
 	},
 	"output.Terminus 2":
 	{
@@ -1152,7 +968,7 @@
 	"project": "farmnet.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1161,18 +977,6 @@
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"logtemp",
-				"static\\app\\log-page\\log-page.template.html"
-			],
-			[
-				"percompo",
-				"static\\app\\persons-page\\person-page.component.js"
-			],
-			[
-				"exp",
-				"express-server.js"
-			],
 			[
 				"template.ht",
 				"static\\app\\persons-page\\person-page.template.html"
@@ -1321,7 +1125,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 283.0,
 	"status_bar_visible": true,
 	"template_settings":
